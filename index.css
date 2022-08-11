@@ -1,56 +1,44 @@
-/* Add a gray background color with some padding */
 body {
-  font-family: Arial;
+  font-family: Verdana;
   padding: 20px;
   color: #e4e4e4;
   background: #222222;
 }
 
-/* Header/Blog Title */
 .header {
-  padding: 30px;
-  font-size: 40px;
+  padding: 5px;
+  font-size: 30px;
   text-align: center;
   color: #cd5301;
   background: #333333;
+  border-style: dotted;
+  border-color: #444444;
+  letter-spacing: -1px;
 }
 
-/* Create two unequal columns that floats next to each other */
-/* Left column */
 .mainColumn {   
   float: left;
   width: 85%;
 }
 
-/* Right column */
 .rightColumn {
   float: right;
   width: 12%;
   background-color: #bfbfbf;
 }
 
-/* Fake image */
-.fakeimg {
-  background-color: #aaa;
-  width: 100%;
-  padding: 20px;
-}
-
-/* Add a card effect for articles */
 .card {
    background-color: #444444;
    padding: 20px;
    margin-top: 20px;
 }
 
-/* Clear floats after the columns */
 .row:after {
   content: "";
   display: table;
   clear: both;
 }
 
-/* Footer */
 .footer {
   padding: 20px;
   text-align: center;
@@ -58,7 +46,6 @@ body {
   margin-top: 20px;
 }
 
-/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
 @media screen and (max-width: 800px) {
   .leftcolumn, .rightcolumn {   
     width: 100%;
