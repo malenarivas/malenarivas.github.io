@@ -1,49 +1,38 @@
 body {
-  font-family: Verdana;
-  padding: 20px;
-  color: #e4e4e4;
+  font-family: Arial;
+  font-smooth: never;
+  color: white;
   background: #222222;
 }
 
-.header {
+.views {
+	width: 20px !important;
+}
+
+.pageHeader {
+	width: 100%;
+	height: 30px;
+}
+
+.cardHeader {
   padding: 5px;
   font-size: 30px;
   text-align: center;
   color: #cd5301;
   background: #333333;
-  border-style: dotted;
+  border-style: solid;
   border-color: #444444;
   letter-spacing: -1px;
 }
 
 .mainColumn {   
-  float: left;
-  width: 85%;
-}
-
-.rightColumn {
-  float: right;
-  width: 12%;
-  background-color: #bfbfbf;
+  width: 100%;
 }
 
 .card {
    background-color: #444444;
    padding: 20px;
    margin-top: 20px;
-}
-
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-.footer {
-  padding: 20px;
-  text-align: center;
-  background: #ddd;
-  margin-top: 20px;
 }
 
 @media screen and (max-width: 800px) {
