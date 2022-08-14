@@ -71,14 +71,14 @@ A:visited {
 }
 
 .zoom {
-	animation: zoom 10s ease infinite;
+	animation: zoom 2s ease infinite;
 }
 
 @keyframes zoom {
   0% {
     transform: scale(1, 1);
   }
-  30% {
+  50% {
     transform: scale(1.2, 1.2);
   }
   100% {
