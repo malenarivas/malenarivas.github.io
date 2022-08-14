@@ -1,43 +1,78 @@
 body {
-  font-family: Arial;
-  font-smooth: never;
-  color: white;
-  background: #222222;
+	font-family: 'Exo 2', sans-serif;
+	border-radius: 5px 5px 0px 0px;
+	color: #FFFFFF;
+	background: #000000;
+	font-size: 11pt;
+	margin: 0px;
 }
 
-.views {
-	width: 20px !important;
+.pageBody {
+	width: 770px;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 .pageHeader {
-	width: 100%;
-	height: 30px;
+	border-radius: 5px 5px 0px 0px;
+	border-bottom: 1px solid #000000;
+	padding: 4px 8px 0px 8px;
+	background-color: #151b26;
+}
+
+b {
+	color: #BDBD8C;
+	letter-spacing: -4px;
+}
+
+b:hover {
+  cursor: default;
+}
+
+.pageHeaderText {
+	position: relative;
+    display: inline-block;
+	text-align: left;
+	top: -4px;
 }
 
 .cardHeader {
-  padding: 5px;
-  font-size: 30px;
-  text-align: center;
-  color: #cd5301;
-  background: #333333;
-  border-style: solid;
-  border-color: #444444;
-  letter-spacing: -1px;
+	margin: 0px;
+	padding: 5px;
+	font-size: 12pt;
+	text-align: center;
+	color: #BDBD8C;
+	border-bottom: 1px solid #000000;
+	background-color: #262b37;
 }
-
-.mainColumn {   
-  width: 100%;
-}
-
 .card {
-   background-color: #444444;
-   padding: 20px;
-   margin-top: 20px;
+	padding: 20px;
+	border-bottom: 1px solid #000000;
+	background-color: #151b26;
+}
+
+h2 {
+	margin: 0px;
+}
+
+A:link {
+  text-decoration: none;
+  color: #BDBD8C;
+}
+
+A:hover {
+  text-decoration: none;
+  color: #FFFFFF !important;
+}
+
+A:visited {
+  text-decoration: none;
+  color: #BDBD8C;
 }
 
 @media screen and (max-width: 800px) {
-  .leftcolumn, .rightcolumn {   
-    width: 100%;
-    padding: 0;
-  }
+	.leftcolumn, .rightcolumn {	 
+	width: 100%;
+	padding: 0;
+	}
 }
