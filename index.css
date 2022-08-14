@@ -70,6 +70,22 @@ A:visited {
   color: #BDBD8C;
 }
 
+.zoom {
+	animation: zoom 10s ease infinite;
+}
+
+@keyframes zoom {
+  0% {
+    transform: scale(1, 1);
+  }
+  30% {
+    transform: scale(1.2, 1.2);
+  }
+  100% {
+    transform: scale(1, 1);
+  }
+}
+
 @media screen and (max-width: 800px) {
 	.leftcolumn, .rightcolumn {	 
 	width: 100%;
