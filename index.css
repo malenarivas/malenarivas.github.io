@@ -19,6 +19,9 @@ body {
 	padding: 4px 8px 0px 8px;
 	background-color: #151b26;
 }
+h2 {
+	text-transform: uppercase;
+}
 
 b {
 	color: #BDBD8C;
