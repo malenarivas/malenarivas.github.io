@@ -62,7 +62,7 @@ b:hover {
 	text-align: center;
 	color: #BDBD8C;
 	border-top: 3px solid #4c4c62;
-	border-radius: 2px 2px 0px 0px;
+	border-radius: 2px;
 	background-color: #262b37;
 	font-style: italic;
 	font-weight: 900;
