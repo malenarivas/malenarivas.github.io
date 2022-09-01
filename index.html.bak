@@ -50,8 +50,8 @@
 		<!--add shoutbox-->
 		</span>
 		
-		<span class="comments">
-		<h2 style="margin-top: 20px; padding: 2px; font-size: 14px; border-top: 1px solid #3d4353;" class="cardHeader">COMMENTS</h2>
+		<span style="background-color #262b37" class="comments">
+		<h2 style="margin-top: 20px; padding: 2px; font-size: 14px; border-top: 2px solid #3d4353;" class="cardHeader">COMMENTS</h2>
 		
 		<script src="https://utteranc.es/client.js"
 			repo="malenarivas/malenarivas.github.io"
