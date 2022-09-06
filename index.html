@@ -23,12 +23,12 @@
 	<span class="bodyMain">
 	
 		<div id="tab-container">
-		<button onclick="tabSwitch()" id="tab1" class="tab active" style="border-radius: 3px 0px 0px 0px;">CALENDAR</button>
-		<button onclick="tabSwitch()" id="tab2" class="tab">BLOG</button>
-		<button onclick="tabSwitch()" id="tab3" class="tab" style="border-radius: 0px 3px 0px 0px;">SHOUTBOX</button>
+		<button class="tabLinks active" onclick="openTab(event, 'Calendar')">CALENDAR</button>
+		<button class="tabLinks" onclick="openTab(event, 'Blog')">BLOG</button>
+		<button class="tabLinks" onclick="openTab(event, 'Shoutbox')">SHOUTBOX</button>
 		</div>
 	
-		<span id="tab1" style="display: block;" class="calendar">
+		<span id="Calendar" class="tabcontent">
 			<h2 class="cardHeader">MALENA&CALENDAR</h2>
 			
 			<iframe src="https://calendar.google.com/calendar/embed?height=600&wkst=1&bgcolor=%23ffffff&ctz=America%2FChicago&showTitle=0&showPrint=0&showDate=1&showTabs=1&showCalendars=1&showTz=0&title=Malena%20Blog%20Public%20Calendar&src=bWFsZW5hcml2YXNjb250YWN0QGdtYWlsLmNvbQ&src=YWxjNms2Z2tqb3Awcjc4aWZvaDc1ZGlsamtAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&src=c2lpYTg1YjRydjQwc3UzMzJycDRlcHZmZzhAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&src=bHIxZTNpMzc4MHV2Y2RkYzBxZmVwNXBpYm9AZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&src=NWFwMmUyOWhmOXQ0b21rNGtmdmloM3Fwb2tAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&src=cDM4NGJmamh2bW81MjJ0cGY1Z2FxYTc4N3NAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&color=%23F6BF26&color=%238E24AA&color=%23F4511E&color=%23009688&color=%234285F4&color=%23D50000" style="border:solid 1px #777" width="768" height="600" frameborder="0" scrolling="no"></iframe>
@@ -42,12 +42,54 @@
 			</div>
 		</span>
 		
-		<span id="tab2" style="display: none;" class="blog">
-		<!--add blog-->
+		<span id="Blog" class="tabcontent" style="display:none">
+			<h2 style="font-style: italic; font-weight: 900;" class="cardHeader">MALENA&BLOG</h2>
+	
+		<div class="card">
+		<div class="cardContent">
+		<h2>new format</h2>
+		<h5>6.9.2022 - 8:13AM CT</h5>
+		<p>Its the morning of september sixth and ive finished merging everything into the new website format. this format is going to be alot better overtime and good. im gonna have to find a way to add a way to lazy load the blog posts once these start getting longer and stuff but other than that this is gonna be good i need to dwell and theory craft what i want to do for a page system but yeah. ive been streaming on twitch and i want to leave my stream up 24/7 cause i think that would be cool. im gonna create another tab for my 24/7 twitch stream, i might combine the shoutbox and twitch page together. also i know the comment system is bugged a little bit but i am working on that and the shoutbox doesnt let signed in users comment for some reason but i have to look into that. also if anyone wants to look at old versions of the site its all public on github</p>
+		</div>
+		</div>
+	
+		<div class="card">
+		<div class="cardContent">
+		<h2>site change</h2>
+		<h5>24.8.2022 - 9:34AM CT</h5>
+		<p>Im trying to find ways to make the website better. I really deep down feel like the calendar part of the blog makes up the majority of the content of the website so im thinking the calendar should be the home page of the site instead of this blog. these text posts are cool but are not consistent, my calendar however are short and update every day. i decided that im still gonna keep this blog but just move it to this tab instead. if anyone has any objections to this descision feel free to message on the shoutbox</p>
+		</div>
+		</div>
+		
+		<div class="card">
+		<div class="cardContent">
+			<h2>last couple days that i missed</h2>
+			<h5>21.8.2022 - 11:48PM CT</h5>
+			<p>I wanted to leave this post here to let you guys know that I took a couple day break from the website and the calendar/blog since me and shelby went to an anime convention this weekend. but i am back to posting and back to regular updates hopefully. i tryed to the best of my abilities to make accurate calendar posts for the days that i missed so please excuse my idiocy. im planning on going to sleep soon but i really need to record my mc letsplay and i want to learn how to speedrun zelda botw since ive been watching those alot and they really interest me. also ive been playing smash battle areans so if anyone wants to play me on smash message in the shoutbox and ill see it. good night you guys sorry for not updating calendar for a couple days. i had an old friedn just message me :) that was really sweet of them <3 </p>
+		</div>
+		</div>
+		
+		<div class="card">
+		<div class="cardContent">
+			<h2>drawn out post</h2>
+			<h5>18.8.2022 - 1:53AM CT</h5>
+			<p>Hi no-one. This is my first post within my blog? I honestly dont know what this is but regardless I wanted to make an official drawn out pointless description/post since I've been working on this website for a week tonight. My name is Malena Rivas, I am a 21 year old trans women from Texas. I finally got a diagnosis earlier this year through the states MHMR program for my OCD, agoraphobia, emetophobia, pyscosis, paranoia, insomnia, yada, yada, yada. This website is here to document my day to day life as well as my mental health and hobbies and anything I feel like. I have a calendar page where I will be updating daily color-coded updates of my life, if youre interested in that I have a calendar description on that page. I dont know what Im doing or what the point of this is besides it just being. im gonna embed my youtube channel and a discord channel where i can talk with people from here and so on. I want this to be an interactable journey from a visitor side of thing. I know that im stupid and i know that things are meant to be. bear with the website as it goes through its development stages. if anyone finds this website let me know i feel alone alot when it comes to random things in my life so that would be cool. anyways bye</p>
+		</div>
+		</div>
 		</span>
 		
-		<span id="tab3" style="display: none;" class="shoutbox">
-		<!--add shoutbox-->
+		<span id="Shoutbox" class="tabcontent" style="display:none">
+		<div class="card">
+		<div class="cardContent">
+		<widgetbot
+			server="796010529856159775"
+			channel="1009723795721945108"
+			width="730"
+			height="900"
+		></widgetbot>
+		<script src="https://cdn.jsdelivr.net/npm/@widgetbot/html-embed"></script>
+		</div>
+		</div>
 		</span>
 		
 		<span style="background-color: #262b37;" class="comments">
@@ -73,6 +115,7 @@
 				<span class="views">
 					<img src="https://visitor-badge.glitch.me/badge?page_id={{ .Permalink }}&left_text=Total%20Malena%20Blog%20Visits" alt="Views"/>
 				</span>
+				<iframe src="https://discord.com/widget?id=796010529856159775&theme=dark" width="260" height="300" style="padding-top: 20px;" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
 				<!--add site uptimer, contact, & links-->
 			</div>
 		</div>
@@ -89,26 +132,19 @@
 </body>
 
 <script>
-var tabContainer = document.getElementById("tab-container");
-var tabs = tabContainer.getElementsByClassName("tab");
-
-for (var i = 0; i < tabs.length; i++) {
-  tabs[i].addEventListener("click", function() {
-    var current = document.getElementsByClassName("active");
-    current[0].className = current[0].className.replace(" active", "");
-    this.className += " active";
-  });
-} 
-function tabSwitch() {
-var tabs = document.getElementsByIDName("tab");
-  if (tabs.style.display === "none") {
-    tabs.style.display = "block";
-  } else {
-    tabs.style.display = "none";
+function openTab(evt, tabName) {
+  var i, tabcontent, tabLinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
   }
-} 
-
-
+  tabLinks = document.getElementsByClassName("tabLinks");
+  for (i = 0; i < tabLinks.length; i++) {
+    tabLinks[i].className = tabLinks[i].className.replace(" active", "");
+  }
+  document.getElementById(tabName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
 </script>
 
 </html>
