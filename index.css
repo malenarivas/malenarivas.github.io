@@ -41,6 +41,16 @@ body {
 h2 {
 	text-transform: uppercase;
 }
+h5  {
+	display: inline list-item;
+	color: #BDBD8C;
+	margin-bottom: 0px;
+}
+p  {
+	margin-top: 0px;
+	white-space: pre-wrap;
+	tab-size: 0;
+}
 
 b {
 	color: #BDBD8C;
@@ -66,6 +76,7 @@ b:hover {
 	background-color: #262b37;
 	font-style: italic;
 	font-weight: 900;
+	border-bottom: 2px solid black;
 }
 .card {
 	background-color: #151b26;
@@ -73,6 +84,7 @@ b:hover {
 
 .cardContent {
 	padding: 20px;
+	border-bottom: 2px solid black;
 }
 
 .sidebarCard {
