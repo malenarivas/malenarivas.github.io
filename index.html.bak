@@ -9,7 +9,8 @@
 <link rel="stylesheet" href="index.css">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@1,400;1,900&display=swap" rel="stylesheet"> 
+<link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@500&family=Exo:wght@6007display=swap" rel="stylesheet"> 
+<link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@500;900&family=Exo:wght@600&display=swap" rel="stylesheet"> 
 <meta name="viewport" content="width=device-width, initial-scale=.5" />
 </head>
 
@@ -31,7 +32,8 @@
 			<div class="cardContent">
 				<h2>new format</h2>
 				<h5>6.9.2022 - 8:13AM CT</h5>
-				<p>Its the morning of september sixth and ive finished merging everything into the new website format. this format is going to be alot better overtime and good. im gonna have to find a way to add a way to lazy load the blog posts once these start getting longer and stuff but other than that this is gonna be good i need to dwell and theory craft what i want to do for a page system but yeah.
+				<p>
+				Its the morning of september sixth and ive finished merging everything into the new website format. this format is going to be alot better overtime and good. im gonna have to find a way to add a way to lazy load the blog posts once these start getting longer and stuff but other than that this is gonna be good i need to dwell and theory craft what i want to do for a page system but yeah.
 				
 				ive been streaming on twitch and i want to leave my stream up 24/7 cause i think that would be cool. im gonna create another tab for my 24/7 twitch stream, i might combine the shoutbox and twitch page together.
 				
@@ -90,8 +92,13 @@
 			<div class="card">
 				<div class="cardContent">
 					<h2>CALENDAR DESCRIPTION</h2>
-					<h5>Aug 14, 2022</h5>
-					<p>This is a Calendar documenting every day of my life. Hopefully. I need to be consistent for this to end up being worth it. The days are sectioned & color-coded by, Great, Good, Mid, Bad, & Horrible. This way I can keep track of my mental health and my days in general. This will be public on my website for the sake of responsibility and accountability. I want this to become a routine since it's very important for me to not only keep track of my life but to keep track of my OCD, Paranoia, Depression, & my general forgetfulness. Im sure I will change things in the future but for now this is the general idea. I hope I've been cohesive.</p>
+					<h5>14.8.2022</h5>
+					<p>
+					This is a Calendar documenting every day of my life. Hopefully. I need to be consistent for this to end up being worth it. The days are sectioned & color-coded by, Great, Good, Mid, Bad, & Horrible. This way I can keep track of my mental health and my days in general. 
+					
+					This will be public on my website for the sake of responsibility and accountability. I want this to become a routine since it's very important for me to not only keep track of my life but to keep track of my OCD, Paranoia, Depression, & my general forgetfulness. 
+					
+					Im sure I will change things in the future but for now this is the general idea. I hope I've been cohesive.</p>
 				</div>
 			</div>
 		</span>
