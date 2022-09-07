@@ -18,13 +18,13 @@
 	<span class="bodyMain">
 	
 		<div id="tab-container">
-		<button class="tabLinks active" onclick="openTab(event, 'Calendar')">CALENDAR</button>
-		<button class="tabLinks" onclick="openTab(event, 'Blog')">BLOG</button>
+		<button class="tabLinks active" onclick="openTab(event, 'Blog')">BLOG</button>
+		<button class="tabLinks" onclick="openTab(event, 'Calendar')">CALENDAR</button>
 		<button class="tabLinks" onclick="openTab(event, 'Shoutbox')">SHOUTBOX</button>
 		</div>
 		
 	<!-- BLOG TAB -->
-		<span id="Blog" class="tabcontent" style="display:none">
+		<span id="Blog" class="tabcontent">
 			<h2 style="font-style: italic; font-weight: 900;" class="cardHeader">MALENA&BLOG </h2>
 	
 			<div class="card">
