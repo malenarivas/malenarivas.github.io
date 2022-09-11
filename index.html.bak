@@ -9,7 +9,6 @@
 <link rel="stylesheet" href="index.css">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@500&family=Exo:wght@6007display=swap" rel="stylesheet"> 
 <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@500;900&family=Exo:wght@600&display=swap" rel="stylesheet"> 
 <meta name="viewport" content="width=device-width, initial-scale=.5" />
 </head>
@@ -22,6 +21,7 @@
 		<button class="tabLinks active" onclick="openTab(event, 'Blog')">BLOG</button>
 		<button class="tabLinks" onclick="openTab(event, 'Calendar')">CALENDAR</button>
 		<button class="tabLinks" onclick="openTab(event, 'Shoutbox')">SHOUTBOX</button>
+		<button class="tabLinks" onclick="openTab(event, 'Twitter')">TWITTER</button>
 		</div>
 		
 	<!-- BLOG TAB -->
@@ -106,19 +106,30 @@
 		
 	<!-- SHOUTBOX TAB -->
 		<span id="Shoutbox" class="tabcontent" style="display:none">
+		<h2 style="font-style: italic; font-weight: 900;" class="cardHeader">MALENA&SHOUTBOX </h2>
 		<div class="card">
 		<div class="cardContent">
 		<widgetbot
 			server="796010529856159775"
 			channel="1009723795721945108"
 			width="730"
-			height="900"
+			height="820"
 		></widgetbot>
 		<script src="https://cdn.jsdelivr.net/npm/@widgetbot/html-embed"></script>
 		</div>
 		</div>
 		</span>
 		
+		
+	<!-- TWITTER TAB -->
+		<span id="Twitter" class="tabcontent" style="display:none">
+		<h2 style="font-style: italic; font-weight: 900;" class="cardHeader">MALENA&TWITTER </h2>
+		<div class="card">
+		<div class="cardContent">
+		<a class="twitter-timeline" data-width="730" data-height="820" data-theme="dark" href="https://twitter.com/Malenavoid?ref_src=twsrc%5Etfw">Tweets by Malenavoid</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> 
+		</div>
+		</div>
+		</span>
 		
 	<!-- COMMENTS -->
 		<span style="background-color: #262b37;" class="comments">
@@ -143,6 +154,10 @@
 				<span class="views">
 					<img src="https://visitor-badge.glitch.me/badge?page_id={{ .Permalink }}&left_text=Total%20Malena%20Blog%20Visits" alt="Views"/>
 				</span>
+				<p></p>
+				<a href="https://twitter.com/Malenavoid?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-show-count="false">Follow @Malenavoid</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+				<p></p>
+				<a href="https://twitter.com/intent/tweet?screen_name=Malenavoid&ref_src=twsrc%5Etfw" class="twitter-mention-button" data-show-count="false">Tweet to @Malenavoid</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 				<iframe src="https://discord.com/widget?id=796010529856159775&theme=dark" width="260" height="300" style="padding-top: 20px;" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
 				<!--add site uptimer, contact, & links-->
 			</div>
