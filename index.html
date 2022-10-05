@@ -6,6 +6,7 @@
 <title>Malena Rivas Mental Health Comprehensive Index</title>
 <link rel="icon" type="image/x-icon" href="Zeldas_Letter.ico">
 <script defer src="index.js"></script>
+<script src="jquery-3.3.1.min.js"></script>
 <link rel="stylesheet" href="index.css">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -22,6 +23,7 @@
 		<button class="tabLinks" onclick="openTab(event, 'Blog')">BLOG</button>
 		<button class="tabLinks" onclick="openTab(event, 'Twitter')">TWITTER</button>
 		<button class="tabLinks" onclick="openTab(event, 'Shoutbox')">SHOUTBOX</button>
+		<button class="tabLinks" onclick="openTab(event, 'Images')">IMAGES</button>
 		</div>
 		
 	<!-- CALENDAR TAB -->
@@ -137,7 +139,20 @@
 		</div>
 		</span>
 		
-		
+	<!-- IMAGE TAB -->
+		<span id="Images" class="tabcontent" style="display:none">
+		<h2 style="font-style: italic; font-weight: 900;" class="cardHeader">MALENA&IMAGES </h2>
+		<div class="card">
+		<div class="cardContent">
+		<div style="pointer-events: none" id="myModal" class="modal"><img class="modal-content" id="1"></div>
+		<img id="visContent" src="images/cn.png"></img>
+		<img id="visContent" src="images/disney.png"></img>
+		<img id="visContent" src="images/dreamworks.png"></img>
+		<img id="visContent" src="images/fastfood.png"></img>
+		<img id="visContent" src="images/nick.png"></img>
+		</div>
+		</div>
+		</span>
 	<!-- COMMENTS -->
 		<span style="background-color: #262b37;" class="comments">
 		<h2 style="margin-top: 20px; padding: 2px; font-size: 14px; border-top: 2px solid #3d4353;" class="cardHeader">COMMENTS</h2>
@@ -202,6 +217,28 @@ function openTab(evt, tabName) {
   document.getElementById(tabName).style.display = "block";
   evt.currentTarget.className += " active";
 }
+</script>
+<script>
+var modal = document.getElementById("myModal");
+var modalImg = document.getElementById("1");
+var sel = document.getSelection();
+
+$("video").attr("controls", "true");
+$("video").prop("volume", "0.5");
+
+$("img").hover(function() {
+	var src = $(this).attr("src");
+	modal.style.display = "block";
+	modalImg.src = this.src;
+});
+$("img").mouseleave(function() {
+	var src = $(this).attr("src");
+	modal.style.display = "none";
+});
+$("img").click(function() {
+	var src = $(this).attr("src");
+	window.open(this.src);
+});
 </script>
 
 </html>
