@@ -256,18 +256,14 @@ var sel = document.getSelection();
 $("video").attr("controls", "true");
 $("video").prop("volume", "0.5");
 
-$("img").hover(function() {
-	var src = $(this).attr("src");
-	modal.style.display = "block";
-	modalImg.src = this.src;
-});
 $("img").mouseleave(function() {
 	var src = $(this).attr("src");
 	modal.style.display = "none";
 });
 $("img").click(function() {
 	var src = $(this).attr("src");
-	window.open(this.src);
+	modal.style.display = "block";
+	modalImg.src = this.src;
 });
 </script>
 
