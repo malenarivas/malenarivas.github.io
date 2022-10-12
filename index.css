@@ -2,7 +2,7 @@ body {
 	font-family: 'Exo 2', sans-serif;
 	color: #FFFFFF;
 	background: #000000;
-	font-size: 11pt;
+	font-size: 16px;
 	margin: 0px;
 	overflow-x: hidden;
 	overflow-y: scroll;
@@ -11,21 +11,21 @@ body {
 
 .pageBody {
 	display: flex;
-	width: 1124px;
+	width: 80%;
 	margin-left: auto;
 	margin-right: auto;
 }
 
 .bodyMain {
 	display:inline-block;
-	width: 770px;
+	width: 100%;
 	margin-top: 20px;
 	
 }
 
 .bodySidebar {
-	display: inline-block;
-	width: 300px;
+	display: block;
+	width: 30%;
 	margin-top: 20px;
 	margin-left: 20px;
 }
@@ -138,14 +138,20 @@ A:visited {
 	animation: zoom 2s ease infinite;
 }
 
+.imageButton
+{
+	height: 220px;
+	width: 220px;
+	z-index: 2;
+	margin: 4px;
+}
+
+
 #visContent
 {
 	display: inline-grid;
-	height: 229px;
-	width: 229px;
-	margin: 4px;
-	border: 2px solid black;
-	border-radius: 2px;
+	height: 100%;
+	width: 100%;
 	object-position: 50% 20%;
 	object-fit: cover;
 }
@@ -205,6 +211,16 @@ A:visited {
 	100% {
 		transform: scale(1, 1);
 	}
+}
+
+
+#frame { width: 133%; height: 133%;}
+#frame { zoom: 0.75; -moz-transform: scale(0.75); -moz-transform-origin: 0 0; }
+
+@media (max-width: 1000px) {
+    .bodySidebar {
+        display: none;
+    }
 }
 
 @media screen and (max-width: 800px) {
