@@ -6,6 +6,7 @@
 <title>Malena Rivas Mental Health Comprehensive Index</title>
 <link rel="icon" type="image/x-icon" href="Zeldas_Letter.ico">
 <script defer src="index.js"></script>
+<script src="jquery-3.3.1.min.js"></script>
 <link rel="stylesheet" href="index.css">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -18,20 +19,70 @@
 	<span class="bodyMain">
 	
 		<div id="tab-container">
-		<button class="tabLinks active" onclick="openTab(event, 'Blog')">BLOG</button>
-		<button class="tabLinks" onclick="openTab(event, 'Calendar')">CALENDAR</button>
-		<button class="tabLinks" onclick="openTab(event, 'Shoutbox')">SHOUTBOX</button>
+		<button class="tabLinks active" onclick="openTab(event, 'Calendar')">CALENDAR</button>
+		<button class="tabLinks" onclick="openTab(event, 'Blog')">BLOG</button>
 		<button class="tabLinks" onclick="openTab(event, 'Twitter')">TWITTER</button>
+		<button class="tabLinks" onclick="openTab(event, 'Shoutbox')">SHOUTBOX</button>
+		<button class="tabLinks" onclick="openTab(event, 'Images')">IMAGES</button>
 		</div>
 		
+	<!-- CALENDAR TAB -->
+		<span id="Calendar" class="tabcontent">
+			<h2 class="cardHeader">MALENA&CALENDAR </h2>
+			
+			<iframe src="https://calendar.google.com/calendar/embed?height=600&wkst=1&bgcolor=%23ffffff&ctz=America%2FChicago&showNav=1&showPrint=0&showTitle=0&showTz=0&src=bWFsZW5hcml2YXNjb250YWN0QGdtYWlsLmNvbQ&src=YWxjNms2Z2tqb3Awcjc4aWZvaDc1ZGlsamtAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&src=c2lpYTg1YjRydjQwc3UzMzJycDRlcHZmZzhAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&src=bHIxZTNpMzc4MHV2Y2RkYzBxZmVwNXBpYm9AZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&src=NWFwMmUyOWhmOXQ0b21rNGtmdmloM3Fwb2tAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&src=cDM4NGJmamh2bW81MjJ0cGY1Z2FxYTc4N3NAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&src=NjIxNzAwZDk1OWU4OTQ4NzZkNGY1NzdkZmZlMjljNjU2ODk0MmQxNzQ1Zjc3N2QwYWY0OGUxNTEwZmI0ZjFkZkBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&color=%23F6BF26&color=%238E24AA&color=%23F4511E&color=%23009688&color=%234285F4&color=%23D50000&color=%23A79B8E" style="border:solid 1px #777" width="768" height="600" frameborder="0" scrolling="no"></iframe>
+
+			<div class="card">
+				<div class="cardContent">
+					<h2>CALENDAR DESCRIPTION</h2>
+					<h5>14.8.2022</h5>
+					<p>
+					This is a Calendar documenting every day of my life. Hopefully. I need to be consistent for this to end up being worth it. The days are sectioned & color-coded by, Great, Good, Mid, Bad, & Horrible. This way I can keep track of my mental health and my days in general. 
+					
+					This will be public on my website for the sake of responsibility and accountability. I want this to become a routine since it's very important for me to not only keep track of my life but to keep track of my OCD, Paranoia, Depression, Pyschosis & my general forgetfulness. 
+					
+					Im sure I will change things in the future but for now this is the general idea. I hope I've been cohesive.</p>
+				</div>
+			</div>
+		</span>
+		
 	<!-- BLOG TAB -->
-		<span id="Blog" class="tabcontent">
+		<span id="Blog" class="tabcontent" style="display:none">
 			<h2 style="font-style: italic; font-weight: 900;" class="cardHeader">MALENA&BLOG </h2>
 	
 			<div class="card">
 			<div class="cardContent">
+				<h2>Polls and opinions</h2>
+				<h5>10.12.2022 - 1:57PM CT</h5>
+				<p>
+				I wanted to make a quick blog post wanting you guys to weigh in on some ideas that I had concerning the website.
+				
+				I wanted to make weekly, bi-weekly, or monthly, log videos for the website. I figured watching a video instead of reading blocks of text would not only be easier to do but would probably be more enjoyable. I am gonna integrate a poll under the blog post so feel free to vote on if you would enjoy something like this. 
+				
+				Regardless I think Im probably gonna do video logs but I think I just wanted to know the general consensus. But go ahead and leave you answers below or go ahead and email me at malenarivascontact@gmail.com if you need to tell me something or ask anything. (Also Im reverting back to the US standard for the date formats)
+				<form method="post" action="https://poll.pollcode.com/85997188"><div style="background-color:#EEEEEE;padding:2px;width:175px;font-family:Verdana;font-size:small;color:#000000;box-shadow: 0px 0px 5px #888;"><div style="padding:2px 0px 4px 2px;"><strong>Video Logs</strong></div><input type="radio" name="answer" value="1" id="answer859971881" style="float:left;" /><label for="answer859971881" style="float:left;width:150px;">Every Day</label><div style="clear:both;height:2px;"></div><input type="radio" name="answer" value="2" id="answer859971882" style="float:left;" /><label for="answer859971882" style="float:left;width:150px;">Alternating Days</label><div style="clear:both;height:2px;"></div><input type="radio" name="answer" value="3" id="answer859971883" style="float:left;" /><label for="answer859971883" style="float:left;width:150px;">Weekly</label><div style="clear:both;height:2px;"></div><input type="radio" name="answer" value="4" id="answer859971884" style="float:left;" /><label for="answer859971884" style="float:left;width:150px;">Bi-weekly</label><div style="clear:both;height:2px;"></div><input type="radio" name="answer" value="5" id="answer859971885" style="float:left;" /><label for="answer859971885" style="float:left;width:150px;">Monthly</label><div style="clear:both;height:2px;"></div><div align="center" style="padding:3px;"><input type="submit" value=" Vote ">&nbsp;<input type="submit" name="view" value=" View "></div></div></form>
+				
+				</p>
+				</div>
+			</div>
+	
+			<div class="card">
+			<div class="cardContent">
+				<h2>Dear future child</h2>
+				<h5>10.5.2022 - 4:36PM CT</h5>
+				<p>
+				Dear future child,
+
+				I'm sorry I can't birth you in this life. You deserve all the happiness in life but this body is the biggest obstacle to it happening. I hope we will be able to properly meet in the next life.
+
+				I will always love you, Mom</p>
+				</div>
+			</div>
+	
+			<div class="card">
+			<div class="cardContent">
 				<h2>new format</h2>
-				<h5>6.9.2022 - 8:13AM CT</h5>
+				<h5>9.6.2022 - 8:13AM CT</h5>
 				<p>
 				Its the morning of september sixth and ive finished merging everything into the new website format. this format is going to be alot better overtime and good. im gonna have to find a way to add a way to lazy load the blog posts once these start getting longer and stuff but other than that this is gonna be good i need to dwell and theory craft what i want to do for a page system but yeah.
 				
@@ -42,9 +93,9 @@
 			</div>
 		
 			<div class="card">
-				<div class="cardContent">
+			<div class="cardContent">
 				<h2>site change</h2>
-				<h5>24.8.2022 - 9:34AM CT</h5>
+				<h5>8.24.2022 - 9:34AM CT</h5>
 				<p>
 				Im trying to find ways to make the website better. I really deep down feel like the calendar part of the blog makes up the majority of the content of the website so im thinking the calendar should be the home page of the site instead of this blog. 
 				
@@ -53,9 +104,9 @@
 			</div>
 			
 			<div class="card">
-				<div class="cardContent">
+			<div class="cardContent">
 				<h2>last couple days that i missed</h2>
-				<h5>21.8.2022 - 11:48PM CT</h5>
+				<h5>8.21.2022 - 11:48PM CT</h5>
 				<p>
 				I wanted to leave this post here to let you guys know that I took a couple day break from the website and the calendar/blog since me and shelby went to an anime convention this weekend. but i am back to posting and back to regular updates hopefully. 
 				
@@ -66,9 +117,9 @@
 			</div>
 			
 			<div class="card">
-				<div class="cardContent">
+			<div class="cardContent">
 				<h2>drawn out post</h2>
-				<h5>18.8.2022 - 1:53AM CT</h5>
+				<h5>8.18.2022 - 1:53AM CT</h5>
 				<p>
 				Hi no-one. This is my first post within my blog? I honestly dont know what this is but regardless I wanted to make an official drawn out pointless description/post since I've been working on this website for a week tonight. 
 				
@@ -81,28 +132,18 @@
 				I know that im stupid and i know that things are meant to be. bear with the website as it goes through its development stages. if anyone finds this website let me know i feel alone alot when it comes to random things in my life so that would be cool. anyways bye</p>
 				</div>
 			</div>
-		</span>
+		</span>	
 		
-	<!-- CALENDAR TAB -->
-		<span id="Calendar" class="tabcontent" style="display:none">
-			<h2 class="cardHeader">MALENA&CALENDAR </h2>
-			
-			<iframe src="https://calendar.google.com/calendar/embed?height=600&wkst=1&bgcolor=%23ffffff&ctz=America%2FChicago&showTitle=0&showPrint=0&showDate=1&showTabs=1&showCalendars=1&showTz=0&title=Malena%20Blog%20Public%20Calendar&src=bWFsZW5hcml2YXNjb250YWN0QGdtYWlsLmNvbQ&src=YWxjNms2Z2tqb3Awcjc4aWZvaDc1ZGlsamtAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&src=c2lpYTg1YjRydjQwc3UzMzJycDRlcHZmZzhAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&src=bHIxZTNpMzc4MHV2Y2RkYzBxZmVwNXBpYm9AZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&src=NWFwMmUyOWhmOXQ0b21rNGtmdmloM3Fwb2tAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&src=cDM4NGJmamh2bW81MjJ0cGY1Z2FxYTc4N3NAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&color=%23F6BF26&color=%238E24AA&color=%23F4511E&color=%23009688&color=%234285F4&color=%23D50000" style="border:solid 1px #777" width="768" height="600" frameborder="0" scrolling="no"></iframe>
-
-			<div class="card">
-				<div class="cardContent">
-					<h2>CALENDAR DESCRIPTION</h2>
-					<h5>14.8.2022</h5>
-					<p>
-					This is a Calendar documenting every day of my life. Hopefully. I need to be consistent for this to end up being worth it. The days are sectioned & color-coded by, Great, Good, Mid, Bad, & Horrible. This way I can keep track of my mental health and my days in general. 
-					
-					This will be public on my website for the sake of responsibility and accountability. I want this to become a routine since it's very important for me to not only keep track of my life but to keep track of my OCD, Paranoia, Depression, & my general forgetfulness. 
-					
-					Im sure I will change things in the future but for now this is the general idea. I hope I've been cohesive.</p>
-				</div>
-			</div>
+	<!-- TWITTER TAB -->
+		<span id="Twitter" class="tabcontent" style="display:none">
+		<h2 style="font-style: italic; font-weight: 900;" class="cardHeader">MALENA&TWITTER </h2>
+		<div class="card">
+		<div class="cardContent">
+		<a class="twitter-timeline" data-width="730" data-height="820" data-theme="dark" href="https://twitter.com/Malenavoid?ref_src=twsrc%5Etfw">Tweets by Malenavoid</a>
+		<script async src="widgets.js" charset="utf-8"></script> 
+		</div>
+		</div>
 		</span>
-		
 		
 	<!-- SHOUTBOX TAB -->
 		<span id="Shoutbox" class="tabcontent" style="display:none">
@@ -116,21 +157,31 @@
 			height="820"
 		></widgetbot>
 		<script src="https://cdn.jsdelivr.net/npm/@widgetbot/html-embed"></script>
+		<div class="card">
+			<div class="cardContent">
+				<p>
+				wanna join the discord and not lurk, heres the inv link: </p>
+				<a href="https://discord.gg/qPqZmnb7Dp">https://discord.gg/qPqZmnb7Dp</a>
+			</div>
+		</div>
 		</div>
 		</div>
 		</span>
 		
-		
-	<!-- TWITTER TAB -->
-		<span id="Twitter" class="tabcontent" style="display:none">
-		<h2 style="font-style: italic; font-weight: 900;" class="cardHeader">MALENA&TWITTER </h2>
+	<!-- IMAGE TAB -->
+		<span id="Images" class="tabcontent" style="display:none">
+		<h2 style="font-style: italic; font-weight: 900;" class="cardHeader">MALENA&IMAGES </h2>
 		<div class="card">
 		<div class="cardContent">
-		<a class="twitter-timeline" data-width="730" data-height="820" data-theme="dark" href="https://twitter.com/Malenavoid?ref_src=twsrc%5Etfw">Tweets by Malenavoid</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> 
+		<div style="pointer-events: none" id="myModal" class="modal"><img class="modal-content" id="1"></div>
+		<img id="visContent" src="images/cn.png"></img>
+		<img id="visContent" src="images/disney.png"></img>
+		<img id="visContent" src="images/dreamworks.png"></img>
+		<img id="visContent" src="images/fastfood.png"></img>
+		<img id="visContent" src="images/nick.png"></img>
 		</div>
 		</div>
 		</span>
-		
 	<!-- COMMENTS -->
 		<span style="background-color: #262b37;" class="comments">
 		<h2 style="margin-top: 20px; padding: 2px; font-size: 14px; border-top: 2px solid #3d4353;" class="cardHeader">COMMENTS</h2>
@@ -143,6 +194,7 @@
 			async>
 		</script>
 		</span>
+		
 	</span>
 	
 	
@@ -155,10 +207,8 @@
 					<img src="https://visitor-badge.glitch.me/badge?page_id={{ .Permalink }}&left_text=Total%20Malena%20Blog%20Visits" alt="Views"/>
 				</span>
 				<p></p>
-				<a href="https://twitter.com/Malenavoid?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-show-count="false">Follow @Malenavoid</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+				<iframe src="https://discord.com/widget?id=796010529856159775&theme=dark" width="370" height="500" style="padding-top: 20px; margin-left: -55px; margin-top: -80px; margin-bottom: -70px; transform: scale(.75);" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
 				<p></p>
-				<a href="https://twitter.com/intent/tweet?screen_name=Malenavoid&ref_src=twsrc%5Etfw" class="twitter-mention-button" data-show-count="false">Tweet to @Malenavoid</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-				<iframe src="https://discord.com/widget?id=796010529856159775&theme=dark" width="260" height="300" style="padding-top: 20px;" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
 				<a href="https://discord.gg/qPqZmnb7Dp">Join the Discord</a>
 				<!--add site uptimer, contact, & links-->
 			</div>
@@ -196,6 +246,28 @@ function openTab(evt, tabName) {
   document.getElementById(tabName).style.display = "block";
   evt.currentTarget.className += " active";
 }
+</script>
+<script>
+var modal = document.getElementById("myModal");
+var modalImg = document.getElementById("1");
+var sel = document.getSelection();
+
+$("video").attr("controls", "true");
+$("video").prop("volume", "0.5");
+
+$("img").hover(function() {
+	var src = $(this).attr("src");
+	modal.style.display = "block";
+	modalImg.src = this.src;
+});
+$("img").mouseleave(function() {
+	var src = $(this).attr("src");
+	modal.style.display = "none";
+});
+$("img").click(function() {
+	var src = $(this).attr("src");
+	window.open(this.src);
+});
 </script>
 
 </html>
