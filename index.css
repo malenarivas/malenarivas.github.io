@@ -221,11 +221,7 @@ A:visited {
     .bodySidebar {
         display: none;
     }
-}
-
-@media screen and (max-width: 800px) {
-	.leftcolumn, .rightcolumn {	 
-	width: 100%;
-	padding: 0;
+	.pageBody {
+		width: 95%;
 	}
 }

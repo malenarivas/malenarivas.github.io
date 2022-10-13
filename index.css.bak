@@ -214,13 +214,16 @@ A:visited {
 }
 
 
-#frame { width: 133%; height: 500px;}
+#frame { width: 133%; height: 133%;}
 #frame { zoom: 0.75; -moz-transform: scale(0.75); -moz-transform-origin: 0 0; }
 
 @media (max-width: 1000px) {
     .bodySidebar {
         display: none;
     }
+	.pageBody {
+		width: 95%;
+	}
 }
 
 @media screen and (max-width: 800px) {

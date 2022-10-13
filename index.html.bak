@@ -60,10 +60,8 @@
 				I wanted to make weekly, bi-weekly, or monthly, log videos for the website. I figured watching a video instead of reading blocks of text would not only be easier to do but would probably be more enjoyable. I am gonna integrate a trial poll under the blog post so feel free to vote on if you would enjoy something like this. 
 				
 				Regardless I think Im probably gonna do video logs but I think I just wanted to know the general consensus. But go ahead and leave you answers below or go ahead and email me at malenarivascontact@gmail.com if you need to tell me something or ask anything. (Also Im reverting back to the US standard for the date formats)
-				
-				<div class="strawpoll-embed" id="strawpoll_B2ZB30vqjyJ" style="height: auto; width: 100%; display: flex; flex-direction: column;"><iframe title="StrawPoll Embed" id="strawpoll_iframe_B2ZB30vqjyJ" src="https://strawpoll.com/embed/polls/B2ZB30vqjyJ" style="position: static; visibility: visible; display: flex; width: 100%; flex-grow: 1;" frameborder="0" allowfullscreen allowtransparency>Loading...</iframe><script async src="https://cdn.strawpoll.com/dist/widgets.js" charset="utf-8"></script></div>
-				
 				</p>
+				<span style="display: flex;" class="strawpoll-embed" id="strawpoll_B2ZB30vqjyJ"><iframe style="width: 100%; overflow: hidden;" title="StrawPoll Embed" id="strawpoll_iframe_B2ZB30vqjyJ" src="https://strawpoll.com/embed/polls/B2ZB30vqjyJ" frameborder="0" allowfullscreen allowtransparency>Loading...</iframe><script async src="https://cdn.strawpoll.com/dist/widgets.js" charset="utf-8"></script></span>
 				</div>
 			</div>
 	
@@ -175,11 +173,11 @@
 		<div class="card">
 		<div class="cardContent">
 		<div style="pointer-events: none" id="myModal" class="modal"><img class="modal-content" id="1"></div>
-		<button class="imageButton"><img id="visContent" src="images/cn.png"></img></button>
-		<button class="imageButton"><img id="visContent" src="images/disney.png"></img></button>
-		<button class="imageButton"><img id="visContent" src="images/dreamworks.png"></img></button>
-		<button class="imageButton"><img id="visContent" src="images/fastfood.png"></img></button>
-		<button class="imageButton"><img id="visContent" src="images/nick.png"></img></button>
+		<button class="imageButton"><img id="visContent" src="images/imagetab/cn.png"></img></button>
+		<button class="imageButton"><img id="visContent" src="images/imagetab/disney.png"></img></button>
+		<button class="imageButton"><img id="visContent" src="images/imagetab/dreamworks.png"></img></button>
+		<button class="imageButton"><img id="visContent" src="images/imagetab/fastfood.png"></img></button>
+		<button class="imageButton"><img id="visContent" src="images/imagetab/nick.png"></img></button>
 		</div>
 		</div>
 		</span>
@@ -208,8 +206,8 @@
 					<img src="https://visitor-badge.glitch.me/badge?page_id={{ .Permalink }}&left_text=Total%20Malena%20Blog%20Visits" alt="Views"/>
 				</span>
 				<p></p>
-				<iframe id="frame" src="https://discord.com/widget?id=796010529856159775&theme=dark" style="width: 133%; height: 133%;" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
-				<a href="https://discord.gg/qPqZmnb7Dp">Join the Discord</a>
+				<iframe id="frame" src="https://discord.com/widget?id=796010529856159775&theme=dark" style="width: 133%; height: 400px; margin-bottom: -90px;" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
+				<center><a href="https://discord.gg/qPqZmnb7Dp">Join the Discord</a></center>
 				<!--add site uptimer, contact, & links-->
 			</div>
 		</div>
@@ -217,7 +215,7 @@
 		<h2 style="margin-top: 20px;" class="cardHeader">YOTSUBA IMAGE </h2>
 		<div class="sidebarCard">
 			<div class="sidebarCardContent">
-				<img style="display: block; margin-left: auto; margin-right: auto; width: 50px; height: 50px;" src="yotsuba.png"></img>
+				<img style="display: block; margin-left: auto; margin-right: auto; width: 50px; height: 50px;" src="images/yotsuba.png"></img>
 			</div>
 		</div>
 	</span>
