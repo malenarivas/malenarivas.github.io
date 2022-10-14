@@ -39,6 +39,10 @@ body {
 	height: 46px;
 	width: 100%;
 }
+.comments
+{
+	width: 80%;
+}
 h2 {
 	text-transform: uppercase;
 }
