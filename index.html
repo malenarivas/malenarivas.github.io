@@ -21,9 +21,8 @@
 		<div id="tab-container">
 		<button href="#" class="tabLinks active" onclick="openTab(event, 'Calendar')">CALENDAR</button>
 		<button href="#" class="tabLinks" onclick="openTab(event, 'Blog')">BLOG</button>
-		<button href="#" class="tabLinks" onclick="openTab(event, 'Twitter')">TWITTER</button>
-		<button href="#" class="tabLinks" onclick="openTab(event, 'Shoutbox')">SHOUTBOX</button>
-		<button href="#" class="tabLinks" onclick="openTab(event, 'Images')">IMAGES</button>
+		<button href="#" class="tabLinks" onclick="openTab(event, 'Discord')">DISCORD</button>
+		<button style="display:none;" href="#" class="tabLinks" onclick="openTab(event, 'Rant')">RANT</button>
 		</div>
 		
 	<!-- CALENDAR TAB -->
@@ -133,20 +132,9 @@
 			</div>
 		</span>	
 		
-	<!-- TWITTER TAB -->
-		<span id="Twitter" class="tabcontent" style="display:none">
-		<h2 style="font-style: italic; font-weight: 900;" class="cardHeader">MALENA&TWITTER </h2>
-		<div class="card">
-		<div class="cardContent">
-		<a class="twitter-timeline" data-width="730" data-height="820" data-theme="dark" href="https://twitter.com/Malenavoid?ref_src=twsrc%5Etfw">Tweets by Malenavoid</a>
-		<script async src="widgets.js" charset="utf-8"></script> 
-		</div>
-		</div>
-		</span>
-		
-	<!-- SHOUTBOX TAB -->
-		<span id="Shoutbox" class="tabcontent" style="display:none">
-		<h2 style="font-style: italic; font-weight: 900;" class="cardHeader">MALENA&SHOUTBOX </h2>
+	<!-- DISCORD TAB -->
+		<span id="Discord" class="tabcontent" style="display:none">
+		<h2 style="font-style: italic; font-weight: 900;" class="cardHeader">MALENA&DISCORD </h2>
 		<div class="card">
 		<div class="cardContent">
 		<widgetbot
@@ -167,36 +155,25 @@
 		</div>
 		</span>
 		
-	<!-- IMAGE TAB -->
-		<span id="Images" class="tabcontent" style="display:none">
-		<h2 style="font-style: italic; font-weight: 900;" class="cardHeader">MALENA&IMAGES </h2>
-		<div class="card">
-		<div class="cardContent">
-		<div style="pointer-events: none" id="myModal" class="modal"><img class="modal-content" id="1"></div>
-		<button class="imageButton"><img id="visContent" src="images/imagetab/cn.png"></img></button>
-		<button class="imageButton"><img id="visContent" src="images/imagetab/disney.png"></img></button>
-		<button class="imageButton"><img id="visContent" src="images/imagetab/dreamworks.png"></img></button>
-		<button class="imageButton"><img id="visContent" src="images/imagetab/fastfood.png"></img></button>
-		<button class="imageButton"><img id="visContent" src="images/imagetab/nick.png"></img></button>
-		</div>
-		</div>
+	<!-- RANT TAB -->
+		<span style="display:none;" id="Rant" class="tabcontent">
+			<h2 class="cardHeader">MALENA&RANT</h2>
+
+			<div class="card">
+				<div class="cardContent">
+				<object data="test.txt" width="100%" height="400">Not supported</object>
+				</div>
+			</div>
 		</span>
-	<!-- COMMENTS -->
-		<span style="background-color: #262b37;" class="comments">
-		<h2 style="margin-top: 20px; padding: 2px; font-size: 14px; border-top: 2px solid #3d4353;" class="cardHeader">COMMENTS</h2>
 		
-		<script src="https://utteranc.es/client.js"
-			repo="malenarivas/malenarivas.github.io"
-			issue-term="pathname"
-			theme="github-dark"
-			crossorigin="anonymous"
-			async>
-		</script>
+	<!-- FOOTER -->
+		<span style="background-color: #262b37;" class="comments">
+		<h2 style="margin-top: 20px; padding: 2px; font-size: 14px; border-top: 2px solid #3d4353;" class="cardHeader">TEMPORARY FOOTER</h2>
 		</span>
 		
 	</span>
-	
-	
+
+
 	<!-- SIDEBAR -->
 	<span class="bodySidebar">
 		<h2 style="margin-top: 28px" class="cardHeader">MALENA&STATS </h2>
@@ -206,24 +183,42 @@
 					<center><img src="https://visitor-badge.glitch.me/badge?page_id={{ .Permalink }}&left_text=Total%20Malena%20Blog%20Visits" alt="Failed to load visit counter"/></center>
 				</span>
 				<p></p>
-				<iframe id="frame" src="https://discord.com/widget?id=796010529856159775&theme=dark" style="width: 133%; height: 400px; margin-bottom: -90px;" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
+				<iframe id="frame" src="https://discord.com/widget?id=796010529856159775&theme=dark" style="width: 133%; height: 600px; margin-bottom: -90px;" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
 				<center><a href="https://discord.gg/qPqZmnb7Dp">Join the Discord</a></center>
 				<!--add site uptimer, contact, & links-->
 			</div>
 		</div>
 		
+		<span id="hideOnLoad">
 		<h2 style="margin-top: 20px;" class="cardHeader">YOTSUBA IMAGE </h2>
 		<div class="sidebarCard">
 			<div class="sidebarCardContent">
 				<img style="display: block; margin-left: auto; margin-right: auto; width: 50px; height: 50px;" src="images/yotsuba.png"></img>
 			</div>
 		</div>
+		</span>
 	</span>
 	
 </div>
 </body>
 
 <script>
+var txtFile = new XMLHttpRequest();
+var allText = "file not found";
+txtFile.onreadystatechange = function () {
+	if (txtFile.readyState === XMLHttpRequest.DONE && txtFile.status == 200) {
+		allText = txtFile.responseText;
+		allText = allText.split("\n").join("<br>");
+	}
+document.getElementById('txt').innerHTML = allText;
+}
+txtFile.open("GET", '/result/client.txt', true);
+txtFile.send(null);
+
+window.onload = function () {
+     document.getElementById("hideOnLoad").style.display = "none";
+};
+
 function openTab(evt, tabName) {
   var i, tabcontent, tabLinks;
   tabcontent = document.getElementsByClassName("tabcontent");
@@ -237,24 +232,6 @@ function openTab(evt, tabName) {
   document.getElementById(tabName).style.display = "block";
   evt.currentTarget.className += " active";
 }
-</script>
-<script>
-var modal = document.getElementById("myModal");
-var modalImg = document.getElementById("1");
-var sel = document.getSelection();
-
-$("video").attr("controls", "true");
-$("video").prop("volume", "0.5");
-
-$("img").mouseleave(function() {
-	var src = $(this).attr("src");
-	modal.style.display = "none";
-});
-$("img").click(function() {
-	var src = $(this).attr("src");
-	modal.style.display = "block";
-	modalImg.src = this.src;
-});
 </script>
 
 </html>
