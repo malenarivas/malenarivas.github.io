@@ -21,16 +21,15 @@
 		<div id="tab-container">
 		<button href="#" class="tabLinks active" onclick="openTab(event, 'Calendar')">CALENDAR</button>
 		<button href="#" class="tabLinks" onclick="openTab(event, 'Blog')">BLOG</button>
-		<button href="#" class="tabLinks" onclick="openTab(event, 'Twitter')">TWITTER</button>
-		<button href="#" class="tabLinks" onclick="openTab(event, 'Shoutbox')">SHOUTBOX</button>
-		<button href="#" class="tabLinks" onclick="openTab(event, 'Images')">IMAGES</button>
+		<button href="#" class="tabLinks" onclick="openTab(event, 'Discord')">DISCORD</button>
+		<button style="display:none;" href="#" class="tabLinks" onclick="openTab(event, 'Rant')">RANT</button>
 		</div>
 		
 	<!-- CALENDAR TAB -->
 		<span id="Calendar" class="tabcontent">
 			<h2 class="cardHeader">MALENA&CALENDAR </h2>
 			
-			<iframe src="https://calendar.google.com/calendar/embed?height=600&wkst=1&bgcolor=%23ffffff&ctz=America%2FChicago&showNav=1&showPrint=0&showTitle=0&showTz=0&src=bWFsZW5hcml2YXNjb250YWN0QGdtYWlsLmNvbQ&src=YWxjNms2Z2tqb3Awcjc4aWZvaDc1ZGlsamtAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&src=c2lpYTg1YjRydjQwc3UzMzJycDRlcHZmZzhAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&src=bHIxZTNpMzc4MHV2Y2RkYzBxZmVwNXBpYm9AZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&src=NWFwMmUyOWhmOXQ0b21rNGtmdmloM3Fwb2tAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&src=cDM4NGJmamh2bW81MjJ0cGY1Z2FxYTc4N3NAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&src=NjIxNzAwZDk1OWU4OTQ4NzZkNGY1NzdkZmZlMjljNjU2ODk0MmQxNzQ1Zjc3N2QwYWY0OGUxNTEwZmI0ZjFkZkBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&color=%23F6BF26&color=%238E24AA&color=%23F4511E&color=%23009688&color=%234285F4&color=%23D50000&color=%23A79B8E" width="100%" height="600px" frameborder="0" scrolling="no"></iframe>
+			<iframe src="https://calendar.google.com/calendar/embed?height=600&wkst=1&bgcolor=%23ffffff&ctz=America%2FChicago&showNav=1&showPrint=0&showTitle=0&showTz=0&src=bWFsZW5hcml2YXNjb250YWN0QGdtYWlsLmNvbQ&src=YWxjNms2Z2tqb3Awcjc4aWZvaDc1ZGlsamtAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&src=c2lpYTg1YjRydjQwc3UzMzJycDRlcHZmZzhAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&src=bHIxZTNpMzc4MHV2Y2RkYzBxZmVwNXBpYm9AZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&src=NWFwMmUyOWhmOXQ0b21rNGtmdmloM3Fwb2tAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&src=cDM4NGJmamh2bW81MjJ0cGY1Z2FxYTc4N3NAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&src=NjIxNzAwZDk1OWU4OTQ4NzZkNGY1NzdkZmZlMjljNjU2ODk0MmQxNzQ1Zjc3N2QwYWY0OGUxNTEwZmI0ZjFkZkBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&color=%23F6BF26&color=%238E24AA&color=%23F4511E&color=%23009688&color=%234285F4&color=%23D50000&color=%23A79B8E" width="100%" height="800px" frameborder="0" scrolling="no"></iframe>
 
 			<div class="card">
 				<div class="cardContent">
@@ -61,7 +60,7 @@
 				
 				Regardless I think Im probably gonna do video logs but I think I just wanted to know the general consensus. But go ahead and leave you answers below or go ahead and email me at malenarivascontact@gmail.com if you need to tell me something or ask anything. (Also Im reverting back to the US standard for the date formats)
 				</p>
-				<span style="display: flex !important;"><span style="width: 100%; height: 100%; overflow: hidden;" class="strawpoll-embed" id="strawpoll_B2ZB30vqjyJ"><iframe style="width: 100%; height: 100%; overflow: hidden;" title="StrawPoll Embed" id="strawpoll_iframe_B2ZB30vqjyJ" src="https://strawpoll.com/embed/polls/B2ZB30vqjyJ" frameborder="0" allowfullscreen allowtransparency>Loading...</iframe><script async src="https://cdn.strawpoll.com/dist/widgets.js" charset="utf-8"></script></span></span>
+				<div class="strawpoll-embed" id="strawpoll_B2ZB30vqjyJ" style="height: 610px !important; width: 100%;"><iframe style="height: 610px; width: 100%;" title="StrawPoll Embed" id="strawpoll_iframe_B2ZB30vqjyJ" src="https://strawpoll.com/embed/polls/B2ZB30vqjyJ" frameborder="0">Loading...</iframe><script async src="https://cdn.strawpoll.com/dist/widgets.js" charset="utf-8"></script></div>
 				</div>
 			</div>
 	
@@ -133,27 +132,16 @@
 			</div>
 		</span>	
 		
-	<!-- TWITTER TAB -->
-		<span id="Twitter" class="tabcontent" style="display:none">
-		<h2 style="font-style: italic; font-weight: 900;" class="cardHeader">MALENA&TWITTER </h2>
-		<div class="card">
-		<div class="cardContent">
-		<a class="twitter-timeline" data-width="730" data-height="820" data-theme="dark" href="https://twitter.com/Malenavoid?ref_src=twsrc%5Etfw">Tweets by Malenavoid</a>
-		<script async src="widgets.js" charset="utf-8"></script> 
-		</div>
-		</div>
-		</span>
-		
-	<!-- SHOUTBOX TAB -->
-		<span id="Shoutbox" class="tabcontent" style="display:none">
-		<h2 style="font-style: italic; font-weight: 900;" class="cardHeader">MALENA&SHOUTBOX </h2>
+	<!-- DISCORD TAB -->
+		<span id="Discord" class="tabcontent" style="display:none">
+		<h2 style="font-style: italic; font-weight: 900;" class="cardHeader">MALENA&DISCORD </h2>
 		<div class="card">
 		<div class="cardContent">
 		<widgetbot
 			server="796010529856159775"
-			channel="1009723795721945108"
+			channel="1037518591714676866"
 			width="100%"
-			height="820"
+			height="720"
 		></widgetbot>
 		<script src="https://cdn.jsdelivr.net/npm/@widgetbot/html-embed"></script>
 		<div class="card">
@@ -167,63 +155,69 @@
 		</div>
 		</span>
 		
-	<!-- IMAGE TAB -->
-		<span id="Images" class="tabcontent" style="display:none">
-		<h2 style="font-style: italic; font-weight: 900;" class="cardHeader">MALENA&IMAGES </h2>
-		<div class="card">
-		<div class="cardContent">
-		<div style="pointer-events: none" id="myModal" class="modal"><img class="modal-content" id="1"></div>
-		<button class="imageButton"><img id="visContent" src="images/imagetab/cn.png"></img></button>
-		<button class="imageButton"><img id="visContent" src="images/imagetab/disney.png"></img></button>
-		<button class="imageButton"><img id="visContent" src="images/imagetab/dreamworks.png"></img></button>
-		<button class="imageButton"><img id="visContent" src="images/imagetab/fastfood.png"></img></button>
-		<button class="imageButton"><img id="visContent" src="images/imagetab/nick.png"></img></button>
-		</div>
-		</div>
+	<!-- RANT TAB -->
+		<span style="display:none;" id="Rant" class="tabcontent">
+			<h2 class="cardHeader">MALENA&RANT</h2>
+
+			<div class="card">
+				<div class="cardContent">
+				<object data="test.txt" width="100%" height="400">Not supported</object>
+				</div>
+			</div>
 		</span>
-	<!-- COMMENTS -->
-		<span style="background-color: #262b37;" class="comments">
-		<h2 style="margin-top: 20px; padding: 2px; font-size: 14px; border-top: 2px solid #3d4353;" class="cardHeader">COMMENTS</h2>
 		
-		<script src="https://utteranc.es/client.js"
-			repo="malenarivas/malenarivas.github.io"
-			issue-term="pathname"
-			theme="github-dark"
-			crossorigin="anonymous"
-			async>
-		</script>
+	<!-- FOOTER -->
+		<span style="background-color: #262b37;" class="comments">
+		<h2 style="margin-top: 20px; padding: 2px; font-size: 14px; border-top: 2px solid #3d4353;" class="cardHeader">TEMPORARY FOOTER</h2>
 		</span>
 		
 	</span>
-	
-	
+
+
 	<!-- SIDEBAR -->
 	<span class="bodySidebar">
 		<h2 style="margin-top: 28px" class="cardHeader">MALENA&STATS </h2>
 		<div class="sidebarCard">
 			<div class="sidebarCardContent">
-				<span class="views">
-					<img style="width: 100%; height: 21px;" src="https://visitor-badge.glitch.me/badge?page_id={{ .Permalink }}&left_text=Total%20Malena%20Blog%20Visits" alt="Failed to load visits"/>
-				</span>
-				<p></p>
-				<iframe id="frame" src="https://discord.com/widget?id=796010529856159775&theme=dark" style="width: 133%; height: 400px; margin-bottom: -90px;" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
-				<center><a href="https://discord.gg/qPqZmnb7Dp">Join the Discord</a></center>
+				<!-- <span class="views">
+					<center><img src="https://visitor-badge.glitch.me/badge?page_id={{ .Permalink }}&left_text=Total%20Malena%20Blog%20Visits" alt="Failed to load visit counter"/></center>
+				</span> -->
+				<iframe id="frame" src="https://discord.com/widget?id=796010529856159775&theme=dark" style="width: 133%; height: 700px; margin-bottom: -38%;" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
 				<!--add site uptimer, contact, & links-->
+				<a href="https://www.last.fm/user/malenarivas"><img src="https://lastfm-recently-played.vercel.app/api?user=malenarivas" style="margin-top: -15%;" height="auto" width="100%"/></a>
 			</div>
 		</div>
 		
+		<span id="hideOnLoad">
 		<h2 style="margin-top: 20px;" class="cardHeader">YOTSUBA IMAGE </h2>
 		<div class="sidebarCard">
 			<div class="sidebarCardContent">
 				<img style="display: block; margin-left: auto; margin-right: auto; width: 50px; height: 50px;" src="images/yotsuba.png"></img>
 			</div>
 		</div>
+		</span>
 	</span>
 	
 </div>
 </body>
 
 <script>
+var txtFile = new XMLHttpRequest();
+var allText = "file not found";
+txtFile.onreadystatechange = function () {
+	if (txtFile.readyState === XMLHttpRequest.DONE && txtFile.status == 200) {
+		allText = txtFile.responseText;
+		allText = allText.split("\n").join("<br>");
+	}
+document.getElementById('txt').innerHTML = allText;
+}
+txtFile.open("GET", '/result/client.txt', true);
+txtFile.send(null);
+
+window.onload = function () {
+     document.getElementById("hideOnLoad").style.display = "none";
+};
+
 function openTab(evt, tabName) {
   var i, tabcontent, tabLinks;
   tabcontent = document.getElementsByClassName("tabcontent");
@@ -237,24 +231,6 @@ function openTab(evt, tabName) {
   document.getElementById(tabName).style.display = "block";
   evt.currentTarget.className += " active";
 }
-</script>
-<script>
-var modal = document.getElementById("myModal");
-var modalImg = document.getElementById("1");
-var sel = document.getSelection();
-
-$("video").attr("controls", "true");
-$("video").prop("volume", "0.5");
-
-$("img").mouseleave(function() {
-	var src = $(this).attr("src");
-	modal.style.display = "none";
-});
-$("img").click(function() {
-	var src = $(this).attr("src");
-	modal.style.display = "block";
-	modalImg.src = this.src;
-});
 </script>
 
 </html>
