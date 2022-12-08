@@ -43,18 +43,24 @@ body {
 {
 	width: 80%;
 }
-h2 {
+h2 
+{
 	text-transform: uppercase;
+	text-shadow: 1px 1px 4px black;
 }
-h5  {
+h5  
+{
 	display: inline list-item;
 	color: #BDBD8C;
 	margin-bottom: 0px;
+	text-shadow: 1px 1px 4px black;
 }
-p  {
+p  
+{
 	margin-top: 0px;
 	white-space: pre-wrap;
 	tab-size: 0;
+	text-shadow: 1px 1px 4px black;
 }
 
 b {
