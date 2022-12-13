@@ -202,9 +202,14 @@ A:visited {
 	transition: 0.3s;
 }
 
-::-webkit-scrollbar {width: 4px;}
-::-webkit-scrollbar-track {background: #212121;}
-::-webkit-scrollbar-thumb {background: #ffffff50;}
+body::-webkit-scrollbar {width: 2px;}
+body::-webkit-scrollbar-track {background: #212121;}
+body::-webkit-scrollbar-thumb {background: #ffffff50;}
+
+:root{
+  scrollbar-color: #ffffff50 #212121 !important;
+  scrollbar-width: thin !important;
+}
 
 @keyframes fadeIn {
   0% { opacity: 0; }
