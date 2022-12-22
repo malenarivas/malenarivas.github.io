@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<body>
+<body class="lightrope">
 
 <head>
 <title>Malena Rivas Mental Health Comprehensive Index</title>
@@ -14,7 +14,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=.5" />
 </head>
 
-<div class="pageBody">
+<div style="margin-top: 20px;"class="pageBody">
+<span id="snow"></span>
 		
 	<span class="bodyMain">
 	
@@ -249,6 +250,71 @@ function openTab(evt, tabName) {
   document.getElementById(tabName).style.display = "block";
   evt.currentTarget.className += " active";
 }
+
+document.addEventListener('DOMContentLoaded', function(){
+    var script = document.createElement('script');
+    script.src = 'https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js';
+    script.onload = function(){
+        particlesJS("snow", {
+            "particles": {
+                "number": {
+                    "value": 200,
+                    "density": {
+                        "enable": true,
+                        "value_area": 800
+                    }
+                },
+                "color": {
+                    "value": "#ffffff"
+                },
+                "opacity": {
+                    "value": 0.2,
+                    "random": false,
+                    "anim": {
+                        "enable": false
+                    }
+                },
+                "size": {
+                    "value": 3,
+                    "random": true,
+                    "anim": {
+                        "enable": false
+                    }
+                },
+                "line_linked": {
+                    "enable": false
+                },
+                "move": {
+                    "enable": true,
+                    "speed": 5,
+                    "direction": "bottom",
+                    "random": true,
+                    "straight": false,
+                    "out_mode": "out",
+                    "bounce": false,
+                    "attract": {
+                        "enable": true,
+                        "rotateX": 300,
+                        "rotateY": 1200
+                    }
+                }
+            },
+            "interactivity": {
+                "events": {
+                    "onhover": {
+                        "enable": false
+                    },
+                    "onclick": {
+                        "enable": false
+                    },
+                    "resize": false
+                }
+            },
+            "retina_detect": true
+        });
+    }
+    document.head.append(script);
+});
 </script>
 
 </html>
