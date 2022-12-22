@@ -245,7 +245,7 @@ body::-webkit-scrollbar-thumb {background: #ffffff50;}
 
 
 .lightrope{
-	background-image: url("https://cdn.shopify.com/s/files/1/0107/4751/0884/products/ChristmasLightsBlinking_300x300.gif");
+	background-image: url("christmaslights.gif");
 	background-repeat: repeat-x;
 	background-position: 0px -5px;
 }
