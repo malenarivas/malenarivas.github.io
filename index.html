@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<body !class="lightrope">
+
+<head>
+<title>Anime Crush Index</title>
+<link rel="icon" type="image/x-icon" href="Zeldas_Letter.ico">
+<script defer src="index.js"></script>
+<script src="jquery-3.3.1.min.js"></script>
+<link rel="stylesheet" href="index.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@500;900&family=Exo:wght@600&display=swap" rel="stylesheet"> 
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous"/>
+<meta name="viewport" content="width=device-width, initial-scale=.5" />
+</head>
+
+<div style="margin-top: 0px;"class="pageBody">
+<!-- <span id="snow"></span> -->
+		
+	<span class="bodyMain">
+	
+		<div id="tab-container">
+		<button href="#" class="tabLinks active" onclick="openTab(event, 'Posts')">POSTS</button>
+		</div>
+		
+	<!-- SOCIAL TAB -->
+		<span id="Posts" class="tabcontent">
+			<h2 style="font-style: italic; font-weight: 900;" class="cardHeader">MALENACRUSH </h2>
+	
+			<div class="card">
+			<div class="cardContent">
+			</div>
+			</div>
+		</span>	
+		
+		
+		<span style="background-color: #262b37;" class="comments">
+		<h2 style="margin-top: 20px; padding: 2px; font-size: 14px; border-top: 2px solid #3d4353;" class="cardHeader"></h2>
+		<script src="https://utteranc.es/client.js"
+        repo="malenacrush/malenacrush.github.io"
+        issue-term="pathname"
+        theme="github-dark"
+        crossorigin="anonymous"
+        async>
+		</script>
+		</span>
+		
+	</span>
+	
+</div>
+</body>
+
+<script>
+var txtFile = new XMLHttpRequest();
+var allText = "file not found";
+txtFile.onreadystatechange = function () {
+	if (txtFile.readyState === XMLHttpRequest.DONE && txtFile.status == 200) {
+		allText = txtFile.responseText;
+		allText = allText.split("\n").join("<br>");
+	}
+document.getElementById('txt').innerHTML = allText;
+}
+txtFile.open("GET", '/result/client.txt', true);
+txtFile.send(null);
+
+window.onload = function () {
+     document.getElementById("hideOnLoad").style.display = "none";
+};
+
+function openTab(evt, tabName) {
+  var i, tabcontent, tabLinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tabLinks = document.getElementsByClassName("tabLinks");
+  for (i = 0; i < tabLinks.length; i++) {
+    tabLinks[i].className = tabLinks[i].className.replace(" active", "");
+  }
+  document.getElementById(tabName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+
+document.addEventListener('DOMContentLoaded', function(){
+    var script = document.createElement('script');
+    script.src = 'https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js';
+    script.onload = function(){
+        particlesJS("snow", {
+            "particles": {
+                "number": {
+                    "value": 200,
+                    "density": {
+                        "enable": true,
+                        "value_area": 800
+                    }
+                },
+                "color": {
+                    "value": "#ffffff"
+                },
+                "opacity": {
+                    "value": 0.2,
+                    "random": false,
+                    "anim": {
+                        "enable": false
+                    }
+                },
+                "size": {
+                    "value": 3,
+                    "random": true,
+                    "anim": {
+                        "enable": false
+                    }
+                },
+                "line_linked": {
+                    "enable": false
+                },
+                "move": {
+                    "enable": true,
+                    "speed": 5,
+                    "direction": "bottom",
+                    "random": true,
+                    "straight": false,
+                    "out_mode": "out",
+                    "bounce": false,
+                    "attract": {
+                        "enable": true,
+                        "rotateX": 300,
+                        "rotateY": 1200
+                    }
+                }
+            },
+            "interactivity": {
+                "events": {
+                    "onhover": {
+                        "enable": false
+                    },
+                    "onclick": {
+                        "enable": false
+                    },
+                    "resize": false
+                }
+            },
+            "retina_detect": true
+        });
+    }
+    document.head.append(script);
+});
+</script>
+
+
+</html>
