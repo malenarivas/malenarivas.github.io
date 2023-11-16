@@ -3,31 +3,59 @@
 <body !class="lightrope">
 
 <head>
-<title>Anime Crush Index</title>
-<link rel="icon" type="image/x-icon" href="Zeldas_Letter.ico">
+<title>Malena Rivas Comprehensive Index v2</title>
+<link rel="icon" type="image/x-icon" href="images\Zeldas_Letter.ico">
 <script defer src="index.js"></script>
 <link rel="stylesheet" href="index.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Prompt&display=swap" rel="stylesheet"> 
 <meta name="viewport" content="width=device-width, initial-scale=.5" />
 </head>
 
 <div class="pageBody">
-<!-- <span id="snow"></span> -->
+<span id="snow"></span>
 		
 	<span class="bodyMain">
-	
-		<div id="tab-container">
-		<button href="#" class="tabLinks active" onclick="openTab(event, 'Posts')">POSTS</button>
+		<div class="side-container">
+		<center>
+		<button href="#" class="tabLinks active" onclick="openTab(event, 'Calendar')">CALENDAR</button>
+		<button href="#" class="tabLinks" onclick="openTab(event, 'Blog')">BLOG</button>
+		<p></p>
+		<a href="https://www.last.fm/user/malenarivas"><img src="https://lastfm-recently-played.vercel.app/api?user=malenarivas" height="auto" width="350px"/></a>
+						<div class="bottom">
+
+					<!-- Social Icons -->
+						<ul class="icons">
+							<li><a href="https://twitter.com/Malenavoid" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+							<li><a href="https://github.com/malenarivas" class="icon brands fa-github"><span class="label">Github</span></a></li>
+						</ul>
+
+				</div>
+		</center>
 		</div>
 		
-	<!-- SOCIAL TAB -->
-		<span id="Posts" class="tabcontent">
-			<h2 style="font-style: italic; font-weight: 900;" class="cardHeader">ANIMECRUSH </h2>
+	<!-- Calendar Tab -->
+		<center id="Calendar" class="tabcontent">
+			<h2 style="font-weight: 900;" class="cardHeader">Calendar</h2>
+	
+			<div class="card">
+			<iframe src="https://calendar.google.com/calendar/embed?height=600&wkst=1&bgcolor=%23ffffff&ctz=America%2FChicago&showNav=0&showTitle=0&showDate=1&showPrint=0&showTabs=1&showTz=1&showCalendars=1&src=bWFsZW5hcml2YXNjb250YWN0QGdtYWlsLmNvbQ&src=ZDBjYTBjMGMxYmVjYmY3YjZiMzgzNThkNTI2NGMwYzdiNDkyZDMxOWE3MTY1NjMwY2E4MjQ3ZGYyODMwODZlNkBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&src=MDFmNTIwMjIxNzFlNjMxZWRlNmEzYTJiYmRjMzI5ZjE1N2Q2ODliMGM2MjlmMjM0YzVkNjMwMjVlNTFhYzZhNEBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&color=%23F6BF26&color=%23D81B60&color=%234285F4" style="border-width:0" width="70%" height="800px" frameborder="0" scrolling="no"></iframe>
+			<div class="cardContent">
+			</div>
+			</div>
+		</center>	
+		
+		<!-- Blog Tab -->
+		<center id="Blog" class="tabcontent" style="display: none;">
+			<h2 style="font-weight: 900;" class="cardHeader">Blog</h2>
 	
 			<div class="card">
 			<div class="cardContent">
 			</div>
 			</div>
-		</span>	
+		</center>
+		
 		
 	</span>
 	
