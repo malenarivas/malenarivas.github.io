@@ -9,7 +9,6 @@ body
 	color: white;
 	font-family: 'Prompt';
 	letter-spacing: 1px;
-	overflow: hidden;
 	margin: 0px;
 }
 h2
@@ -86,5 +85,5 @@ h2
   top: 0;
   right: 0;
   background-color: #111;
-  overflow-x: hidden;
+  overflow-x: hidden; 
 }
