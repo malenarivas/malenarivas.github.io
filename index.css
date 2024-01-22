@@ -1,6 +1,6 @@
 @media (max-width : 800px) 
 {
-    .tabcontent {width:90% !important; margin:0px !important;}
+    .tabcontent {width:100% !important; margin:0px !important;}
 	.side-container  {width:45% !important; display:none !important;}
 }
 body
