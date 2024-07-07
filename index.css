@@ -1,7 +1,6 @@
 @media (max-width : 800px) 
 {
     .tabcontent {width:100% !important; margin:0px !important;}
-	.side-container  {width:45% !important; display:none !important;}
 }
 body
 {
@@ -26,13 +25,13 @@ h2
 
 .tabcontent
 {
-	width:60%;
+	width:90%;
+	padding-top: 5%;
+	padding-bottom: 5%;
+	padding-left: 5%;
+	padding-right: 5%;
 	background-color: #11111199;
 	height:100%;
-	padding: 2%;
-	margin-top: 3%;
-	margin-left: 6%;
-	margin-right: 6%;
 	display: inline-block;
 	z-index: 2;
 }
@@ -75,15 +74,4 @@ h2
   top: 0;
   right: 0;
   background-color: #111;
-}
-.side-container 
-{
-  height: 100%;
-  width: 25%;
-  display: inline-block;
-  position: fixed;
-  top: 0;
-  right: 0;
-  background-color: #111;
-  overflow-x: hidden; 
 }
