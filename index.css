@@ -32,6 +32,10 @@ input.accordion
 	color: white; 
 	box-shadow: 5px 5px 5px #00000085;
 }
+input.accordion:hover
+{
+	cursor:pointer;
+}
 .tabcontent
 {
 	
