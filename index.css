@@ -2,7 +2,7 @@ html
 {
 	overflow: -moz-scrollbars-none !important;
 	-ms-overflow-style: none !important;
-    scrollbar-width: none !important;
+		scrollbar-width: none !important;
 }
 body
 {
@@ -19,7 +19,7 @@ html::-webkit-scrollbar
 input.accordion
 {
 	font-family: 'Prompt';
-	text-shadow: 2px 2px 2px black;
+	text-shadow: 0 0 5px #868686, 0 0 10px #000, 0 0 15px #000, 0 0 20px #000, 0 0 30px #000, 0 0 40px #000, 0 0 55px #000, 0 0 75px #000;
 	width: 800px;
 	height: 200px;
 	background-color: transparent;
@@ -59,8 +59,9 @@ input.accordion
 	max-width: 800px;
 	overflow: hidden;
 	transition: max-height 0.2s ease-out;
-	color: #f365ff;
+	color: #9559c8;
 }
+
 .measuringWrapper 
 {
 	box-shadow: 4px 4px solid black;
@@ -93,8 +94,44 @@ img:hover
 }
 #snow
 {
-    position:fixed;
-    z-index:-1;
+	position:fixed;
+	z-index:-1;
 	width: 100%;
 	height: 100%;
+}
+.tabLinks 
+{
+	float: left;
+	margin-right: 10px !important;
+	margin-top: -20px !important;
+	margin-bottom: -20px !important;
+	align-items: center;
+	background-color: #1e1e1e;
+	border: 1px solid rgba(0, 0, 0, 0);
+	box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0;
+	box-sizing: border-box;
+	color: white;
+	cursor: pointer;
+	display: inline-flex;
+	font-family: system-ui,-apple-system,system-ui,"Helvetica Neue",Helvetica,Arial,sans-serif;
+	font-size: 16px;
+	font-weight: 600;
+	justify-content: center;
+	line-height: 1.25;
+	margin: 0;
+	min-height: 3rem;
+	padding: calc(.875rem - 1px) calc(1.5rem - 1px);
+	position: relative;
+	text-decoration: none;
+	user-select: none;
+	-webkit-user-select: none;
+	touch-action: manipulation;
+	vertical-align: baseline;
+	width: auto;
+}
+
+.tabLinks:hover
+{
+	color: white;
+	background-color: #9559c8;
 }
