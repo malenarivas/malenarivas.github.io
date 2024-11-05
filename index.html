@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
-<body !class="lightrope">
 
+<body !class="lightrope">
+<span !id="snow"></span>
 <head>
-<title>Malena Rivas Comprehensive Index v2</title>
+<title>Malena Rivas - Level Designer</title>
 <link rel="icon" type="image/x-icon" href="images\Zeldas_Letter.ico">
 <script defer src="index.js"></script>
 <link rel="stylesheet" href="index.css">
@@ -12,59 +13,107 @@
 <link href="https://fonts.googleapis.com/css2?family=Prompt&display=swap" rel="stylesheet"> 
 <meta name="viewport" content="width=device-width, initial-scale=.5" />
 </head>
-
-<div class="pageBody">
-<span id="snow"></span>
-		
-	<span class="bodyMain">
-		<div class="top-container">
-		<button href="#" class="tabLinks active" onclick="openTab(event, 'Blog')">BLOG</button>
-		<button href="#" class="tabLinks" onclick="openTab(event, 'About')">ABOUT</button>
-		</div>
-	
-	<!-- Blog Tab -->
-		<center id="Blog" class="tabcontent">
-			<h2 style="font-weight: 900;" class="cardHeader">Blog</h2>
-			
-			<div class="cardContent">
-				<h1>My Pathetic Attempt at Blogging.</h1>
-				<p>Nov 30, 2023 ✎ Malena Rivas • Entry 1</p>
-			    My website has been closed for the better part of a year now, and after a long needed break I am coming back with a new update to the website and a new update to the blog.
-				Previously my website was shut down because of people looking too much into my personal life (which was partially my fault). My calendar section of the website documenting my everyday activities in detail was clearly not a good idea.
-				So instead the current calendar is following the same format, just without the personal descriptions to my days. This rework will be better for the personal health and privacy of me.
-				<p></p>
-				I would've continued the website and blog privately instead of publically but I still want my thoughts to be broadcasted in a public manner. I am coming into this setting with an open mind and a lot more time on my hands to focus on the things that matter most to me.
-				Previously I wasn't in the best headspace mentally when I documented some things and that ended up biting me in the ass. I do not plan on making the same mistakes.
-				<p></p>
-				This will stay professional hopefully. If anyone wants to contact me please refer to the Discord on the sidebar, and I will get back as soon as I can. Thank you, buh-bye :).
+<center class="bodyContainer">
+	<h5 style="text-align: left; font-size: 36px; color: #9559c8;">Malena Rivas</h5>
+	<h5 style="text-align: left; font-size: 20px;">Level Designer & World Builder</h5>
+	<h6></h6>
+	<div class="buttonContainer">
+	<button href="#" class="tabLinks active" onclick="openTab(event, 'Home')">HOME</button>
+	<button href="#" class="tabLinks" onclick="openTab(event, 'Resume')">RESUME & ABOUT</button>
+	</div>
+</center>
+<center class="bodyContainer">
+	<!-- HOME PAGE -->
+	<div class="tabcontent" id="Home" style="text-align: left">
+	<p style="color: #9559c8">Hello and welcome to my portfolio!</p>
+	<p></p>
+	My name is Malena Rivas and I am a disabled 24 year old woman. I have been modding and making games for the last decade semi-professionally. I have worked on many different mods as well as personal projects but the note-worthy ones are listed down below!
+	<p></p>
+	I love level design, it's quite literally my passion and has been for years. I love planning out gameplay encounters as well as telling a story with my art. My love of gaming and creating worlds is beyond words. 
+	<p></p>
+	I hope you find what you are looking for on my webpage! If you need my contact information please check out my resume!
+	<h6></h6>
+		<input style="background-image:url(images/F4CWHeader.jpg)" class="accordion" type="button" value="Fallout 4: Capital Wasteland">
+			<div id='content' style="text-align: center">▼
+				<div class='measuringWrapper'>
+					<h6></h6>
+					Fallout 4: Capital Wasteland is a large scale fan-made mod for Fallout 4 that aims to recreate the setting of Fallout 3, focusing on the Capital Wasteland— the devastated region surrounding 
+					Washington, D.C. The mod reimagines the familiar world of Fallout 3, allowing players to explore the same locations and encounter similar factions, enemies, and quests, but with 
+					the enhanced visuals and mechanics of Fallout 4. It essentially combines the narrative and environment of Fallout 3 with the gameplay improvements and engine of Fallout 4.
+					<p></p>
+					I worked on Fallout 4: Capital Wasteland for over a year building over 600 exterior/interior world space cells and contributing to the respective repositories weekly earning the title of Senior Level Designer.
+					<h6></h6>
+					<img src="images/1-1.jpg" onclick="window.open('images/1-1.jpg', '_blank');"></img>
+					<img src="images/1-2.jpg" onclick="window.open('images/1-2.jpg', '_blank');"></img>
+				</div>
 			</div>
-			
-			<script src="https://utteranc.es/client.js"
-			repo="malenarivas/malenarivas.github.io"
-			issue-term="pathname"
-			theme="github-dark"
-			crossorigin="anonymous"
-			async>
-			</script>
-		</center>	
-	</span>
-	
-</div>
+		</input>
+		<input style="background-image:url(images/CSCOHeader.jpg)" class="accordion" type="button" value="Counter-Strike: Classic Offensive">
+			<div id='content' style="text-align: center">▼
+				<div class='measuringWrapper'>
+					<h6></h6>
+					Counter-Strike: Classic Offensive is a fan-made mod for Counter-Strike: Global Offensive that aims to recreate the gameplay and atmosphere of the earlier Counter-Strike titles, 
+					particularly Counter-Strike 1.6 and Counter-Strike: Source. It brings back classic maps, weapons, and game modes while retaining the updated engine and mechanics of CS. 
+					The mod is designed for players who prefer the older, more traditional Counter-Strike experience with the modern improvements in graphics and performance from CS.
+					<p></p>
+					I did all the design, asset, & texture creation on de_nuke and shortly on de_dust 2.
+					<h6></h6>
+					<img src="images/3-1.png" onclick="window.open('images/3-1.png', '_blank');"></img>
+					<img src="images/3-2.png" onclick="window.open('images/3-2.png', '_blank');"></img>
+				</div>
+			</div>	
+		</input>
+		<input style="background-image:url(images/SteelheadHeader.jpg)" class="accordion" type="button" value="CS:GO Community Map - Steelhead">
+			<div id='content' style="text-align: center">▼
+				<div class='measuringWrapper'>
+					<h6></h6>
+					A CS community map is a custom-designed map created by players or independent developers, often featuring unique layouts, themes, and gameplay elements not found in official 
+					game maps. These maps are typically shared on platforms like the Steam Workshop, where players can download, play, and provide feedback. Community maps can vary widely in style, 
+					from competitive bomb sites (like those in official maps) to creative, fun, or experimental modes, offering fresh experiences for players seeking something different from the 
+					standard game modes.
+					<p></p>
+					Steelhead was a completely solo project from the layout to the design it was all created by me and was initially released for CS:GO.
+					<h6></h6>
+					<img src="images/2-1.jpg" onclick="window.open('images/2-1.jpg', '_blank');"></img>
+					<img src="images/2-2.jpg" onclick="window.open('images/2-2.jpg', '_blank');"></img>
+				</div>
+			</div>
+		</input>
+	</div>
+	<!-- RESUME PAGE -->
+	<div class="tabcontent" id="Resume" style="text-align: left; display: none;">
+	<center><img style="border: 2px white solid; margin-top: 20px; border-radius: 50%; width: 25%;" src="images/1.jpg"></img></center>
+	<p></p>
+	<p style="color: #9559c8">Hello!</p>
+	<p></p>
+	My name is Malena Rivas and I am a disabled 24 year old woman. I have been modding and making games for the last decade semi-professionally. I have worked on many different mods as well as personal projects but the note-worthy ones are listed down below!
+	<p></p>
+	I love level design, it's quite literally my passion and has been for years. I love planning out gameplay encounters as well as telling a story with my art. My love of gaming and creating worlds is beyond words. 
+	<p></p>
+	I hope you find what you are looking for on my webpage! If you need my contact information please check out my resume!
+	<h6></h6>
+	<img style="margin-top: 20px; width: 10%;" src="images/pdf.png" onclick="window.open('Resume Level Design.pdf', '_blank');">
+	<img style="margin-top: 20px; width: 10%;" src="images/word.png" onclick="window.open('Resume Level Design.docx', '_blank');">
+	</div>
+</center>
 </body>
-
 <script>
-var txtFile = new XMLHttpRequest();
-var allText = "file not found";
-txtFile.onreadystatechange = function () {
-	if (txtFile.readyState === XMLHttpRequest.DONE && txtFile.status == 200) {
-		allText = txtFile.responseText;
-		allText = allText.split("\n").join("<br>");
-	}
-document.getElementById('txt').innerHTML = allText;
-}
-txtFile.open("GET", '/result/client.txt', true);
-txtFile.send(null);
+var acc = document.getElementsByClassName("accordion");
+var i;
 
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.maxHeight) {
+      content.style.maxHeight = null;
+    } else {
+      content.style.maxHeight = content.scrollHeight + "px";
+    }
+  });
+}
+</script>
+<script>
 window.onload = function () {
      document.getElementById("hideOnLoad").style.display = "none";
 };
@@ -82,7 +131,8 @@ function openTab(evt, tabName) {
   document.getElementById(tabName).style.display = "block";
   evt.currentTarget.className += " active";
 }
-
+</script>
+<script>
 document.addEventListener('DOMContentLoaded', function(){
     var script = document.createElement('script');
     script.src = 'https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js';
