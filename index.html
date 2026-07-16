@@ -38,6 +38,14 @@
       border-bottom: 1px solid #2a2a2a;
       border-left: 3px solid #1a1a1a;
       border-right: 3px solid #1a1a1a;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+    }
+
+    .header-text {
+      flex: 1;
+      min-width: 0;
     }
 
     .header-inner h1 {
@@ -153,16 +161,17 @@
       bottom: 16px;
       right: 20px;
       font-size: 18px;
-      color: rgba(255,255,255,0.6);
+      color: rgb(255, 125, 0);
       line-height: 1;
       transition: color 0.2s;
       pointer-events: none;
+      text-shadow: 0px 0px 20px #000000;
     }
 
     .accordion-arrow::after { content: '▼'; }
 
     .accordion.active .accordion-arrow::after { content: '▲'; }
-    .accordion:hover .accordion-arrow { color: rgba(255,255,255,0.85); }
+    .accordion:hover .accordion-arrow { color: rgb(255, 125, 0); }
 
     .accordion-content {
       max-height: 0;
@@ -239,19 +248,21 @@
       background: linear-gradient(135deg, #1a1030 0%, #0d1a2a 50%, #1a1020 100%) !important;
     }
 
-    /* - Resume - */
+    /* ── Header Profile Photo ── */
     .resume-photo {
-      text-align: center;
-      margin-bottom: 28px;
+      flex-shrink: 0;
+      margin-left: 20px;
+      margin-top: -4px;
     }
 
     .resume-photo img {
-      width: 140px;
-      height: 140px;
+      width: 100px;
+      height: 100px;
       border-radius: 50%;
       border: 2px solid #9559c8;
       object-fit: cover;
       box-shadow: 0 6px 20px rgba(0,0,0,0.5);
+      display: block;
     }
 
     .resume-body h2 {
@@ -259,7 +270,7 @@
       font-size: 18px;
       font-weight: 600;
       margin-bottom: 10px;
-      margin-top: 28px;
+      margin-top: 0px;
     }
 
     .resume-body h3 {
@@ -296,6 +307,7 @@
       .header-inner h1 { font-size: 24px; }
       .accordion { height: 160px; font-size: 20px; }
       .project-images { gap: 6px; }
+      .resume-photo img { width: 70px; height: 70px; }
     }
 
     @media (max-width: 500px) {
@@ -307,6 +319,7 @@
       .accordion { height: 130px; font-size: 17px; }
       .project-body, .project-images { padding-left: 16px; padding-right: 16px; }
       .project-images { grid-template-columns: 1fr; }
+      .resume-photo { display: none; }
     }
 
     @media (prefers-reduced-motion: reduce) {
@@ -318,15 +331,19 @@
   </style>
 </head>
 <body>
-
 <header class="site-header" id="site-header">
   <div class="header-inner">
-    <h1>Malena Rivas</h1>
-    <p class="tagline">Programmer & Designer</p>
-    <nav class="tab-nav" role="tablist">
-      <button class="tabLinks active" data-tab="Home" role="tab" aria-selected="true">HOME</button>
-      <button class="tabLinks" data-tab="Resume" role="tab" aria-selected="false">RESUME & ABOUT</button>
-    </nav>
+    <div class="header-text">
+      <h1>Malena Rivas</h1>
+      <p class="tagline">Game Developer</p>
+      <nav class="tab-nav" role="tablist">
+        <button class="tabLinks active" data-tab="Home" role="tab" aria-selected="true">HOME</button>
+        <button class="tabLinks" data-tab="Resume" role="tab" aria-selected="false">RESUME & ABOUT</button>
+      </nav>
+    </div>
+    <span class="resume-photo">
+      <img src="images/icon-pfp.jpg" alt="Malena Rivas">
+    </span>
   </div>
 </header>
 
@@ -335,14 +352,23 @@
 
     <!-- HOME -->
     <section id="Home" class="tabcontent active" role="tabpanel">
-      <div class="intro">
-        <p class="greeting">Hello and welcome to my portfolio!</p>
-        <p>My name is Malena Rivas and I am a 24 year old college student. I have been modding games for the last decade semi-professionally. I have worked on many different mods as well as personal projects but the note-worthy ones are listed down below!</p>
-        <p>I love development, it's quite literally my passion and has been for years. I love planning out gameplay encounters as well as telling a story with my art. My love of creating worlds is beyond words.</p>
-        <p>I hope you find what you are looking for on my webpage! If you need my contact information please check out my resume!</p>
+      <div class="intro" data-markdown>
+## I'm Malena Rivas
+
+I am a multidisciplinary Game Developer with over a decade of experience;
+from programming, art, animation, writing, and design, to simply just **game development.**
+
+With every year that passes, I continue to hone my skills and experience in this field. 
+From engine development to world building, I really just love every single step of the way.
+‎ 
+Below is a selection of my notable projects and community experiences. 
+***For my full technical background and skill set, please refer to my 'Resume & About' page!***
+
+Thank you for reading about me!
+
       </div>
 
-	  <!-- Project 3 -->
+      <!-- Project 3 -->
       <div class="accordion-group">
         <button class="accordion" style="background-image:url(images/Xenolith-Header.jpg)" aria-expanded="false">
           <span class="accordion-label">Xenolith - C# Game</span>
@@ -423,7 +449,7 @@ The mod reimagines the familiar world of Fallout 3, allowing players to explore 
         </div>
       </div>
 
-	  <!-- Extra -->
+      <!-- Extra -->
       <div class="accordion-group">
         <button class="accordion" style="background-image:url(images/Extra-Header.jpg)" aria-expanded="false">
           <span class="accordion-label">Extra - Projects & Information</span>
@@ -448,7 +474,7 @@ The mod reimagines the familiar world of Fallout 3, allowing players to explore 
             <img src="images/Extra-2.jpg" loading="lazy" onclick="window.open(this.src,'_blank')" alt="Steelhead Screenshot 2">
             <img src="images/Extra-3.jpg" loading="lazy" onclick="window.open(this.src,'_blank')" alt="Steelhead Screenshot 3">
             <img src="images/Extra-4.jpg" loading="lazy" onclick="window.open(this.src,'_blank')" alt="Steelhead Screenshot 4">
-			<img src="images/Extra-1.jpg" loading="lazy" onclick="window.open(this.src,'_blank')" alt="Steelhead Screenshot 1">
+            <img src="images/Extra-1.jpg" loading="lazy" onclick="window.open(this.src,'_blank')" alt="Steelhead Screenshot 1">
             <img src="images/Extra-2.jpg" loading="lazy" onclick="window.open(this.src,'_blank')" alt="Steelhead Screenshot 2">
             <img src="images/Extra-3.jpg" loading="lazy" onclick="window.open(this.src,'_blank')" alt="Steelhead Screenshot 3">
             <img src="images/Extra-4.jpg" loading="lazy" onclick="window.open(this.src,'_blank')" alt="Steelhead Screenshot 4">
@@ -460,28 +486,47 @@ The mod reimagines the familiar world of Fallout 3, allowing players to explore 
 
     <!-- RESUME & ABOUT -->
     <section id="Resume" class="tabcontent" role="tabpanel">
-      <div class="resume-photo">
-        <img src="images/_pfp-icon.jpg" alt="Malena Rivas">
-      </div>
       <div class="resume-body" data-markdown>
 ## About Me
-My name is Malena Rivas and I am a 24 year old college student. I have been modding games for the last decade semi-professionally. I love development - it's quite literally my passion and has been for years. I love planning out gameplay encounters as well as telling a story with my art. My love of creating worlds is beyond words.
+I am a Game Developer driven by a passion for building complete, immersive worlds. 
+I started my journey young modding Source Engine titles, which quickly turned into a desire to learn every discipline involved in game creation. 
 
-## Experience
+I have extensive experience across multiple engines, including 2D or 3D pipelines. 
+I've contributed to large-scale singleplayer mod content, built competitive multiplayer maps, and developed original games from the ground up. Independently and in collaborative dev teams.
 
-### Senior Level Designer - Fallout 4: Capital Wasteland
-- Built over **600 exterior/interior world space cells**
-- Contributed to repositories weekly for over a year
-- Collaborated with a large distributed team
+**I also have hundreds of pages worth of design documentation over the years, including lore and system architecture for my various amount of contributed projects!**
 
-### Designer & Texture Artist - Counter-Strike: Classic Offensive
-- Design, asset, and texture creation on **de_nuke**
-- Contributed to **de_dust 2**
+Some of which includes a lore rich shelved 3D project, code-named "Ark Maintenance" and an even more lore and design rich 2D story platformer code-named "Xenolith".
 
-## Skills
-- **Level Design** - World building, encounter design, spatial composition
-- **Texturing & Assets** - Creating game-ready textures and environmental assets
-- **Modding** - Extensive experience with game modding pipelines
+I transitioned away from existing engine frameworks (Godot & Unity) to build my own C# engine using .NET and MonoGame, giving me absolute control over the architecture of my current independent 2D project.
+‎ 
+‎ 
+
+## Technical Experience
+
+**Programming:**
+C#, C++, GDScript, Python, Git, and Java.
+
+
+**Engine Development:** 
+Custom C# Engine (MonoGame/.NET), Godot, Unity, Source Engine, and CreationKit.
+
+
+**Design:**
+2D/3D Level Design, Gameplay Designs, Worldspace Encounters, and Proper Design Documentation.
+
+
+**Narrative Design:**
+Lore, Dialogue, Personalities, Gameplay Systems, and Environmental Storytelling.
+
+
+**Debugging:**
+Profiling, Version Control, Engine and Game Level Optimization.
+
+
+**Art & Animation:**
+Modeling, Texturing, Rigging, Pixel Art, and 2D/3D Animation. (Blender/3dsMax & Aseprite)
+
       </div>
     </section>
 
