@@ -1,814 +1,1093 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Malena Rivas - Game Developer</title>
-  <link rel="icon" type="image/x-icon" href="images/Zeldas_Letter.ico">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;600;700&display=swap" rel="stylesheet">
-  <style>
-    *, *::before, *::after {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Malena Rivas - Game Developer</title>
+    <link rel="icon" type="image/x-icon" href="images/Zeldas_Letter.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        *,
+        *::before,
+        *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-    body {
-      background-color: #111111;
-      color: #d4d4d4;
-      font-family: 'Prompt', sans-serif;
-      letter-spacing: 0.4px;
-      line-height: 1.75;
-      min-height: 100vh;
-    }
+        body {
+            background-color: #111111;
+            color: #d4d4d4;
+            font-family: 'Prompt', sans-serif;
+            font-size: 16px;
+            letter-spacing: 0.4px;
+            line-height: 1.75;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
 
-    .site-header {
-      position: relative;
-      top: 0;
-      z-index: 100;
-    }
+        .site-header {
+            position: relative;
+            top: 0;
+            z-index: 100;
+        }
 
-    .header-inner {
-      max-width: 900px;
-      margin: 0 auto;
-      padding: 24px 24px 0;
-      background-color: #1e1e1e;
-      border-bottom: 1px solid #2a2a2a;
-      border-left: 3px solid #1a1a1a;
-      border-right: 3px solid #1a1a1a;
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-start;
-    }
+        .header-inner {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 24px 24px 0;
+            background-color: #1e1e1e;
+            border-bottom: 1px solid #2a2a2a;
+            border-left: 3px solid #1a1a1a;
+            border-right: 3px solid #1a1a1a;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
 
-    .header-text {
-      flex: 1;
-      min-width: 0;
-    }
+        .header-text {
+            flex: 1;
+            min-width: 0;
+        }
 
-    .header-inner h1 {
-      font-size: 30px;
-      font-weight: 700;
-      color: #9559c8;
-      line-height: 1.2;
-    }
+        .header-inner h1 {
+            font-size: 32px;
+            font-weight: 500;
+            color: #9559c8;
+            line-height: 1.2;
+        }
 
-    .tagline {
-      font-size: 16px;
-      color: #bbbbbb;
-      margin-bottom: 14px;
-      font-weight: 300;
-    }
+        .tagline {
+            font-size: 22px;
+            color: #bbbbbb;
+            margin-bottom: 14px;
+            font-weight: 300;
+        }
 
-    .tab-nav {
-      display: flex;
-      gap: 0;
-    }
+        .tab-nav {
+            display: flex;
+            gap: 0;
+        }
 
-    .tabLinks {
-      font-family: 'Prompt', sans-serif;
-      font-size: 13px;
-      font-weight: 600;
-      letter-spacing: 1.2px;
-      color: #777;
-      background: none;
-      border: none;
-      border-bottom: 2px solid transparent;
-      padding: 10px 0px 10px 0;
-      margin-right: 24px;
-      cursor: pointer;
-      transition: color 0.2s, border-color 0.2s;
-    }
+        .tabLinks {
+            font-family: 'Prompt', sans-serif;
+            font-size: 13px;
+            font-weight: 600;
+            letter-spacing: 1.2px;
+            color: #777;
+            background: none;
+            border: none;
+            border-bottom: 2px solid transparent;
+            padding: 10px 0px 10px 0;
+            margin-right: 24px;
+            cursor: pointer;
+            transition: color 0.2s, border-color 0.2s;
+        }
 
-    .tabLinks:last-child { margin-right: 0; }
-    .tabLinks:hover { color: #aaa; }
+        .tabLinks:last-child {
+            margin-right: 0;
+        }
+        .tabLinks:hover {
+            color: #aaa;
+        }
 
-    .tabLinks.active {
-      color: #9559c8;
-      border-bottom-color: #9559c8;
-    }
+        .tabLinks.active {
+            color: #9559c8;
+            border-bottom-color: #9559c8;
+        }
 
-    .container {
-      max-width: 900px;
-      margin: 0 auto;
-      padding: 36px 64px 200px;
-      background-color: #1e1e1e;
-      border-left: 3px solid #1a1a1a;
-      border-right: 3px solid #1a1a1a;
-    }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 36px 64px 80px;
+            background-color: #1e1e1e;
+            border-left: 3px solid #1a1a1a;
+            border-right: 3px solid #1a1a1a;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
 
-    .tabcontent { display: none; }
-    .tabcontent.active { display: block; }
+        .tabcontent {
+            display: none;
+            flex: 1;
+        }
+        .tabcontent.active {
+            display: block;
+        }
 
-    .greeting {
-      color: #9559c8;
-      font-size: 17px;
-      font-weight: 600;
-      margin-bottom: 10px;
-    }
+        .greeting {
+            color: #9559c8;
+            font-size: 17px;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
 
-    .intro p { margin-bottom: 10px; }
+        .intro p {
+            margin-bottom: 10px;
+        }
 
-    .accordion-group { margin-top: 36px; margin-bottom: 28px; box-shadow: 0 0px 24px rgba(0,0,0,0.5); }
-    .accordion-group + .accordion-group { margin-top: 16px; margin-bottom: 28px; box-shadow: 0 0px 24px rgba(0,0,0,0.5); }
+        .accordion-group {
+            margin-top: 36px;
+            margin-bottom: 28px;
+            box-shadow: 0 0px 24px rgba(0, 0, 0, 0.5);
+        }
+        .accordion-group+.accordion-group {
+            margin-top: 16px;
+            margin-bottom: 28px;
+            box-shadow: 0 0px 24px rgba(0, 0, 0, 0.5);
+        }
 
-    .accordion {
-      position: relative;
-      display: block;
-      width: 100%;
-      height: 200px;
-      font-family: 'Prompt', sans-serif;
-      font-size: 24px;
-      font-weight: 700;
-      color: #fff;
-      text-shadow: 0 2px 10px rgba(0,0,0,0.9), 0 0 30px rgba(0,0,0,0.6);
-      background-color: #111;
-      background-size: cover;
-      background-position: center;
-      border: 2px solid #9559c8;
-      border-radius: 6px;
-      cursor: pointer;
-      padding: 0;
-      text-align: left;
-      user-select: none;
-      -webkit-user-select: none;
-    }
+        .accordion {
+            position: relative;
+            display: block;
+            width: 100%;
+            height: 200px;
+            font-family: 'Prompt', sans-serif;
+            font-size: 24px;
+            font-weight: 700;
+            color: #fff;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.9), 0 0 30px rgba(0, 0, 0, 0.6);
+            background-color: #111;
+            background-size: cover;
+            background-position: center;
+            border: 2px solid #9559c8;
+            border-radius: 6px;
+            cursor: pointer;
+            padding: 0;
+            text-align: left;
+            user-select: none;
+            -webkit-user-select: none;
+        }
 
-    .accordion:hover {
-      border-color: #b07de0;
-    }
+        .accordion:hover {
+            border-color: #b07de0;
+        }
 
-    .accordion.active {
-      border-color: #b07de0;
-      border-radius: 6px 6px 0 0;
-    }
+        .accordion.active {
+            border-color: #b07de0;
+            border-radius: 6px 6px 0 0;
+        }
 
-    .accordion.active:hover {
-      border-color: #b07de0;
-    }
+        .accordion.active:hover {
+            border-color: #b07de0;
+        }
 
-    .accordion-label {
-      display: flex;
-      align-items: flex-end;
-      height: 100%;
-      padding: 16px 60px 16px 20px;
-    }
+        .accordion-label {
+            display: flex;
+            align-items: flex-end;
+            height: 100%;
+            padding: 16px 60px 16px 20px;
+        }
 
-    .accordion-arrow {
-      position: absolute;
-      bottom: 16px;
-      right: 20px;
-      font-size: 18px;
-      color: rgb(255, 125, 0);
-      line-height: 1;
-      transition: color 0.2s;
-      pointer-events: none;
-      text-shadow: 0px 0px 20px #000000;
-    }
+        .accordion-arrow {
+            position: absolute;
+            bottom: 16px;
+            right: 20px;
+            font-size: 18px;
+            color: rgb(255, 125, 0);
+            line-height: 1;
+            transition: color 0.2s;
+            pointer-events: none;
+            text-shadow: 0px 0px 20px #000000;
+        }
 
-    .accordion-arrow::after { content: '▼'; }
+        .accordion-arrow::after {
+            content: '▼';
+        }
 
-    .accordion.active .accordion-arrow::after { content: '▲'; }
-    .accordion:hover .accordion-arrow { color: rgb(255, 125, 0); }
+        .accordion.active .accordion-arrow::after {
+            content: '▲';
+        }
+        .accordion:hover .accordion-arrow {
+            color: rgb(255, 125, 0);
+        }
 
-    .accordion-content {
-      max-height: 0;
-      overflow: hidden;
-      background-color: #1a1a1a;
-      border: 2px solid transparent;
-      border-top: none;
-      border-radius: 0 0 6px 6px;
-    }
+        .accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            background-color: #1a1a1a;
+            border: 2px solid transparent;
+            border-top: none;
+            border-radius: 0 0 6px 6px;
+            transition: max-height 0.35s ease;
+        }
 
-    .accordion.active + .accordion-content {
-      border-color: #b07de0;
-    }
+        .accordion.active+.accordion-content {
+            border-color: #b07de0;
+        }
 
-    .project-body {
-      padding: 28px 28px 8px;
-    }
+        .project-body {
+            padding: 28px 28px 8px;
+        }
 
-    .project-body h2 {
-      color: #9559c8;
-      font-size: 18px;
-      font-weight: 600;
-      margin-bottom: 10px;
-    }
+        .project-body h2 {
+            color: #9559c8;
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
 
-    .project-body h3 {
-      color: #b07de0;
-      font-size: 15px;
-      font-weight: 600;
-      margin-bottom: 8px;
-    }
+        .project-body h3 {
+            color: #b07de0;
+            font-size: 15px;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
 
-    .project-body p { margin-bottom: 12px; }
+        .project-body p {
+            margin-bottom: 12px;
+        }
 
-    .project-body ul {
-      margin: 0 0 12px 22px;
-      list-style-type: disc;
-    }
+        .project-body ul {
+            margin: 0 0 12px 22px;
+            list-style-type: disc;
+        }
 
-    .project-body li {
-      margin-bottom: 5px;
-      padding-left: 2px;
-    }
+        .project-body li {
+            margin-bottom: 5px;
+            padding-left: 2px;
+        }
 
-    .project-body a { color: #9559c8; text-decoration: none; }
-    .project-body a:hover { text-decoration: underline; }
-    .project-body strong { color: #fff; font-weight: 600; }
-    .project-body em { font-style: italic; }
+        .project-body a {
+            color: #9559c8;
+            text-decoration: none;
+        }
+        .project-body a:hover {
+            text-decoration: underline;
+        }
+        .project-body strong {
+            color: #fff;
+            font-weight: 600;
+        }
+        .project-body em {
+            font-style: italic;
+        }
 
-    .project-images {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 8px;
-      padding: 4px 28px 28px;
-    }
+        .project-images {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 8px;
+            padding: 4px 28px 28px;
+        }
 
-    .img-wrap {
-      position: relative;
-      display: block;
-      overflow: hidden;
-      border-radius: 4px;
-    }
+        .img-wrap {
+            position: relative;
+            display: block;
+            overflow: hidden;
+            border-radius: 4px;
+        }
 
-    .img-wrap img {
-      width: 100%;
-      height: auto;
-      border-radius: 4px;
-      cursor: pointer;
-      transition: transform 0.2s, opacity 0.2s, box-shadow 0.2s;
-      display: block;
-      box-shadow: 0 3px 12px rgba(0,0,0,0.4);
-    }
+        .img-wrap img {
+            width: 100%;
+            height: auto;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: transform 0.2s, opacity 0.2s, box-shadow 0.2s;
+            display: block;
+            box-shadow: 0 3px 12px rgba(0, 0, 0, 0.4);
+        }
 
-    .img-wrap:hover img {
-      transform: scale(1.02);
-      opacity: 0.85;
-      box-shadow: 0 5px 20px rgba(0,0,0,0.5);
-    }
+        .img-wrap:hover img {
+            transform: scale(1.02);
+            opacity: 0.85;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+        }
 
-    .img-wrap::after {
-      content: attr(data-tooltip);
-      position: absolute;
-      bottom: 8px;
-      left: 8px;
-      right: 8px;
-      padding: 4px 8px;
-      background: rgba(0, 0, 0, 0.78);
-      color: #c0c0c0;
-      font-size: 10.5px;
-      font-weight: 400;
-      letter-spacing: 0.3px;
-      line-height: 1.4;
-      border-radius: 3px;
-      pointer-events: none;
-      opacity: 0;
-      transform: translateY(5px);
-      transition: opacity 0.3s ease, transform 0.3s ease;
-    }
+        .img-wrap::after {
+            content: attr(data-tooltip);
+            position: absolute;
+            bottom: 8px;
+            left: 8px;
+            right: 8px;
+            padding: 4px 8px;
+            background: rgba(0, 0, 0, 0.78);
+            color: #c0c0c0;
+            font-size: 10.5px;
+            font-weight: 400;
+            letter-spacing: 0.3px;
+            line-height: 1.4;
+            border-radius: 3px;
+            pointer-events: none;
+            opacity: 0;
+            transform: translateY(5px);
+            transition: opacity 0.3s ease, transform 0.3s ease;
+        }
 
-    .img-wrap:hover::after {
-      opacity: 1;
-      transform: translateY(0);
-    }
+        .img-wrap:hover::after {
+            opacity: 1;
+            transform: translateY(0);
+        }
 
-    .accordion-placeholder {
-      background: linear-gradient(135deg, #1a1030 0%, #0d1a2a 50%, #1a1020 100%) !important;
-    }
+        .accordion-placeholder {
+            background: linear-gradient(135deg, #1a1030 0%, #0d1a2a 50%, #1a1020 100%) !important;
+        }
 
-    .resume-photo {
-      flex-shrink: 0;
-      margin-left: 20px;
-      margin-top: -4px;
-    }
+        .resume-photo {
+            flex-shrink: 0;
+            margin-left: 20px;
+            margin-top: -4px;
+        }
 
-    .resume-photo img {
-      width: 100px;
-      height: 100px;
-      border-radius: 50%;
-      border: 2px solid #9559c8;
-      object-fit: cover;
-      box-shadow: 0 6px 20px rgba(0,0,0,0.5);
-      display: block;
-    }
+        .resume-photo img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            border: 2px solid #9559c8;
+            object-fit: cover;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5);
+            display: block;
+        }
 
-    .resume-body h2 {
-      color: #9559c8;
-      font-size: 18px;
-      font-weight: 600;
-      margin-bottom: 10px;
-      margin-top: 0px;
-    }
+        .resume-body h2 {
+            color: #9559c8;
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 10px;
+            margin-top: 0px;
+        }
 
-    .resume-body h3 {
-      color: #b07de0;
-      font-size: 15px;
-      font-weight: 600;
-      margin-bottom: 8px;
-    }
+        .resume-body h3 {
+            color: #b07de0;
+            font-size: 15px;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
 
-    .resume-body p { margin-bottom: 12px; }
+        .resume-body p {
+            margin-bottom: 12px;
+        }
 
-    .resume-body ul {
-      margin: 0 0 12px 22px;
-      list-style-type: disc;
-    }
+        .resume-body ul {
+            margin: 0 0 12px 22px;
+            list-style-type: disc;
+        }
 
-    .resume-body li { margin-bottom: 5px; padding-left: 2px; }
+        .resume-body li {
+            margin-bottom: 5px;
+            padding-left: 2px;
+        }
 
-    .resume-body a { color: #9559c8; text-decoration: none; }
-    .resume-body a:hover { text-decoration: underline; }
-    .resume-body strong { color: #fff; font-weight: 600; }
+        .resume-body a {
+            color: #9559c8;
+            text-decoration: none;
+        }
+        .resume-body a:hover {
+            text-decoration: underline;
+        }
+        .resume-body strong {
+            color: #fff;
+            font-weight: 600;
+        }
 
-    #snow-canvas {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      pointer-events: none;
-      z-index: 9999;
-    }
+        /* ── Footer ── */
+        .site-footer {
+            margin-top: auto;
+            padding-top: 60px;
+            padding-bottom: 24px;
+            text-align: center;
+            flex-shrink: 0;
+        }
 
-    @media (max-width: 740px) {
-      .header-inner h1 { font-size: 24px; }
-      .accordion { height: 160px; font-size: 20px; }
-      .project-images { gap: 6px; }
-      .resume-photo img { width: 70px; height: 70px; }
-    }
+        .site-footer p {
+            color: #777;
+            font-size: 12px;
+            margin-bottom: 4px;
+        }
+        .site-footer p+p {
+            color: #666;
+            font-size: 11px;
+        }
 
-    @media (max-width: 500px) {
-      .header-inner { padding: 18px 16px 0; }
-      .header-inner h1 { font-size: 22px; }
-      .tagline { font-size: 14px; }
-      .tabLinks { font-size: 11px; padding: 10px 14px 8px 0; margin-right: 16px; }
-      .container { padding: 28px 16px 60px; }
-      .accordion { height: 130px; font-size: 17px; }
-      .project-body, .project-images { padding-left: 16px; padding-right: 16px; }
-      .project-images { grid-template-columns: 1fr; }
-      .resume-photo { display: none; }
-    }
+        #snow-canvas {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 9999;
+        }
 
-    @media (prefers-reduced-motion: reduce) {
-      .accordion-content { transition: none; }
-      .img-wrap img { transition: none; }
-      .img-wrap::after { transition: none; }
-      .tabLinks { transition: none; }
-      .header-inner { transition: none; }
-    }
-  </style>
+        /* ── Mobile: 740px ── */
+        @media (max-width: 740px) {
+            body {
+                font-size: 15px;
+            }
+            .header-inner h1 {
+                font-size: 26px;
+            }
+            .tagline {
+                font-size: 18px;
+            }
+            .accordion {
+                height: 140px;
+                font-size: 18px;
+            }
+            .accordion-label {
+                padding: 12px 50px 12px 16px;
+            }
+            .accordion-arrow {
+                bottom: 12px;
+                right: 16px;
+                font-size: 16px;
+            }
+            .project-body {
+                padding: 22px 20px 6px;
+            }
+            .project-images {
+                padding: 4px 20px 22px;
+                gap: 6px;
+            }
+            .project-body h2 {
+                font-size: 16px;
+            }
+            .project-body h3 {
+                font-size: 14px;
+            }
+            .container {
+                padding: 28px 20px 60px;
+            }
+            .resume-photo img {
+                width: 70px;
+                height: 70px;
+            }
+            .site-footer {
+                padding-top: 50px;
+            }
+        }
+
+        /* ── Mobile: 500px ── */
+        @media (max-width: 500px) {
+            body {
+                font-size: 14px;
+            }
+            .header-inner {
+                padding: 14px 12px 0;
+            }
+            .header-inner h1 {
+                font-size: 20px;
+            }
+            .tagline {
+                font-size: 15px;
+                margin-bottom: 8px;
+            }
+            .tabLinks {
+                font-size: 10px;
+                padding: 8px 0px 6px 0;
+                margin-right: 12px;
+                letter-spacing: 0.8px;
+            }
+            .container {
+                padding: 20px 12px 40px;
+            }
+            .accordion {
+                height: 100px;
+                font-size: 15px;
+            }
+            .accordion-label {
+                padding: 10px 40px 10px 12px;
+            }
+            .accordion-arrow {
+                bottom: 10px;
+                right: 12px;
+                font-size: 14px;
+            }
+            .project-body {
+                padding: 16px 12px 4px;
+            }
+            .project-body h2 {
+                font-size: 15px;
+            }
+            .project-body h3 {
+                font-size: 13px;
+            }
+            .project-body p,
+            .project-body li {
+                font-size: 13px;
+                margin-bottom: 8px;
+            }
+            .project-images {
+                padding: 2px 12px 16px;
+                grid-template-columns: 1fr;
+                gap: 6px;
+            }
+            .img-wrap::after {
+                font-size: 9px;
+                bottom: 4px;
+                left: 4px;
+                right: 4px;
+                padding: 3px 6px;
+            }
+            .resume-photo {
+                display: none;
+            }
+            .resume-body h2 {
+                font-size: 15px;
+            }
+            .resume-body h3 {
+                font-size: 13px;
+            }
+            .resume-body p,
+            .resume-body li {
+                font-size: 13px;
+            }
+            .accordion-group {
+                margin-top: 24px;
+                margin-bottom: 20px;
+            }
+            .accordion-group+.accordion-group {
+                margin-top: 12px;
+                margin-bottom: 20px;
+            }
+            .intro p {
+                font-size: 13px;
+            }
+            .site-footer {
+                padding-top: 40px;
+                padding-bottom: 16px;
+            }
+            .site-footer p {
+                font-size: 10px;
+            }
+            .site-footer p+p {
+                font-size: 9px;
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            .accordion-content {
+                transition: none;
+            }
+            .img-wrap img {
+                transition: none;
+            }
+            .img-wrap::after {
+                transition: none;
+            }
+            .tabLinks {
+                transition: none;
+            }
+            .header-inner {
+                transition: none;
+            }
+        }
+    </style>
 </head>
 <body>
-<header class="site-header" id="site-header">
-  <div class="header-inner">
-    <div class="header-text">
-      <h1 style="font-weight: 500; font-size: 32px;">Malena Rivas</h1>
-      <p class="tagline" style="font-size: 22px;">Game Developer</p>
-      <p style="font-size: 12px; margin-top: -16px; padding-bottom: 8px; color: #808080;">contact@malenarivas.com</p>
-      <nav class="tab-nav" role="tablist">
-        <button class="tabLinks active" data-tab="Home" role="tab" aria-selected="true">HOME</button>
-        <button class="tabLinks" data-tab="Resume" role="tab" aria-selected="false">RESUME & ABOUT</button>
-      </nav>
-    </div>
-    <span class="resume-photo">
-      <img src="images/icon-pfp.jpg" alt="Malena Rivas">
-    </span>
-  </div>
-</header>
-
-<main>
-  <div class="container" id="main-container">
-
-    <!-- HOME -->
-    <section id="Home" class="tabcontent active" role="tabpanel">
-      <div class="intro" data-markdown>
-## I'm Malena Rivas
-
-I am a multidisciplinary Game Developer with over a decade of experience;
-from programming, art, animation, writing, and design, to simply just **game development.**
-
-With every year that passes, I continue to hone my skills and experience in this field. 
-From engine development to world building, I really just love every single step of the way.
-‎ 
-Below is a selection of my notable projects and community experiences. 
-***For my full technical background and skill set, please refer to my 'Resume & About' page!***
-
-Thank you for reading about me!
-
-      </div>
-
-      <!-- Xenolith -->
-      <div class="accordion-group">
-        <button class="accordion" style="background-image:url(images/Xenolith-Header.jpg)" aria-expanded="false">
-          <span class="accordion-label">Xenolith - C# Game</span>
-          <span class="accordion-arrow"></span>
-        </button>
-        <div class="accordion-content" aria-hidden="true">
-          <div class="project-body" data-markdown>
-## About
-Xenolith is currently under development. Made completely in my own C# game engine using .NET and MonoGame. More details will be revealed soon.
-
-Xenolith is a Story Driven Metroidvania that uses advanced fluid systems, light systems, and environmental storytelling to invoke a sense of dread and isolation.
-
-You play as **Diver-13 (Call-sign 'Artemis')**. 
-You are part of the Tartarus Dynamics Rescue Squad (TD-RS), trained to evacuate marine researchers and scientists working at Tartarus Dynamics in the event that any of the underwater substations fail, flood, or worse.
-The Leviathans comms went dark 14 hours ago for an unknown reason. You and the rest of your rescue squad travel to different substations to find out what happened to The Leviathan.
-
-## My Role
-- Lead Writer, Developer, & System Designer
-          </div>
-          <div class="project-images">
-            <span class="img-wrap" data-tooltip="Xenolith Screenshot 1"><img src="images/Xenolith-1.jpg" loading="lazy" onclick="window.open(this.src,'_blank')" alt="Xenolith Screenshot 1"></span>
-            <span class="img-wrap" data-tooltip="Xenolith Screenshot 2"><img src="images/Xenolith-2.jpg" loading="lazy" onclick="window.open(this.src,'_blank')" alt="Xenolith Screenshot 2"></span>
-            <span class="img-wrap" data-tooltip="Xenolith Screenshot 3"><img src="images/Xenolith-3.jpg" loading="lazy" onclick="window.open(this.src,'_blank')" alt="Xenolith Screenshot 3"></span>
-            <span class="img-wrap" data-tooltip="Xenolith Screenshot 4"><img src="images/Xenolith-4.jpg" loading="lazy" onclick="window.open(this.src,'_blank')" alt="Xenolith Screenshot 4"></span>
-          </div>
+    <header class="site-header" id="site-header">
+        <div class="header-inner">
+            <div class="header-text">
+                <h1>Malena Rivas</h1>
+                <p class="tagline">Game Developer</p>
+                <p style="font-size: 12px; margin-top: -16px; padding-bottom: 8px; color: #808080;">contact@malenarivas.com</p>
+                <nav class="tab-nav" role="tablist">
+                    <button class="tabLinks active" data-tab="Home" role="tab" aria-selected="true">HOME</button>
+                    <button class="tabLinks" data-tab="Resume" role="tab" aria-selected="false">RESUME & ABOUT</button>
+                </nav>
+            </div>
+            <span class="resume-photo">
+                <img src="images/icon-pfp.jpg" alt="Malena Rivas">
+            </span>
         </div>
-      </div>
+    </header>
 
-      <!-- CSCO -->
-      <div class="accordion-group">
-        <button class="accordion" style="background-image:url(images/CSCO-Header.jpg)" aria-expanded="false">
-          <span class="accordion-label">Classic Offensive - CS:GO Mod</span>
-          <span class="accordion-arrow"></span>
-        </button>
-        <div class="accordion-content" aria-hidden="true">
-          <div class="project-body" data-markdown>
-## About
-Counter-Strike: Classic Offensive was a fan-made overhaul for Counter-Strike: Global Offensive that aimed to recreate the gameplay and atmosphere of the earlier Counter-Strike titles, particularly **Counter-Strike 1.6** and **Counter-Strike: Source**. 
-It brought back classic maps, weapons, and game modes while retaining the updated engine and mechanics of CS.
+    <main>
+        <div class="container" id="main-container">
 
-The mod was designed for players who prefer the older, more traditional Counter-Strike experience with the modern improvements in graphics and performance from CS.
+            <!-- HOME -->
+            <section id="Home" class="tabcontent active" role="tabpanel">
+                <div class="intro" data-markdown>
+                    ## I'm Malena Rivas
 
-## My Role
-- Lead Level Designer
-- Design, asset, and texture creation on **de_nuke**
-- Short-term contribution on **de_dust 2**
-- Focused on maintaining visual consistency with classic CS aesthetics
-- Collaborated with the environment art team on material standards
-          </div>
-          <div class="project-images">
-            <span class="img-wrap" data-tooltip="CSCO Screenshot 1"><img src="images/CSCO-1.jpg" loading="lazy" onclick="window.open(this.src,'_blank')" alt="CSCO Screenshot 1"></span>
-            <span class="img-wrap" data-tooltip="CSCO Screenshot 2"><img src="images/CSCO-2.jpg" loading="lazy" onclick="window.open(this.src,'_blank')" alt="CSCO Screenshot 2"></span>
-            <span class="img-wrap" data-tooltip="CSCO Screenshot 3"><img src="images/CSCO-3.jpg" loading="lazy" onclick="window.open(this.src,'_blank')" alt="CSCO Screenshot 3"></span>
-            <span class="img-wrap" data-tooltip="CSCO Screenshot 4"><img src="images/CSCO-4.jpg" loading="lazy" onclick="window.open(this.src,'_blank')" alt="CSCO Screenshot 4"></span>
-            <span class="img-wrap" data-tooltip="CSCO Screenshot 5"><img src="images/CSCO-5.jpg" loading="lazy" onclick="window.open(this.src,'_blank')" alt="CSCO Screenshot 5"></span>
-            <span class="img-wrap" data-tooltip="CSCO Screenshot 6"><img src="images/CSCO-6.jpg" loading="lazy" onclick="window.open(this.src,'_blank')" alt="CSCO Screenshot 6"></span>
-          </div>
+                    I am a multidisciplinary Game Developer with over a decade of experience;
+                    from programming, art, animation, writing, and design, to simply just **game development.**
+
+                    With every year that passes, I continue to hone my skills and experience in this field.
+                    From engine development to world building, I really just love every single step of the way.
+
+                    Below is a selection of my notable projects and community experiences.
+                    ***For my full technical background and skill set, please refer to my 'Resume & About' page!***
+
+                    Thank you for reading about me!
+
+                </div>
+
+                <!-- Xenolith -->
+                <div class="accordion-group">
+                    <button class="accordion" style="background-image:url(images/Xenolith-Header.jpg)" aria-expanded="false">
+                        <span class="accordion-label">Xenolith - C# Game</span>
+                        <span class="accordion-arrow"></span>
+                    </button>
+                    <div class="accordion-content" aria-hidden="true">
+                        <div class="project-body" data-markdown>
+                            ## About
+                            Xenolith is currently under development. Made completely in my own C# game engine using .NET and
+                            MonoGame. More details will be revealed soon.
+
+                            Xenolith is a Story Driven Metroidvania that uses advanced fluid systems, light systems, and
+                            environmental storytelling to invoke a sense of dread and isolation.
+
+                            You play as **Diver-13 (Call-sign 'Artemis')** .
+                            You are part of the Tartarus Dynamics Rescue Squad (TD-RS), trained to evacuate marine researchers
+                            and scientists working at Tartarus Dynamics in the event that any of the underwater substations
+                            fail, flood, or worse.
+                            The Leviathans comms went dark 14 hours ago for an unknown reason. You and the rest of your rescue
+                            squad travel to different substations to find out what happened to The Leviathan.
+
+                            ## My Role
+                            - Lead Writer, Developer, & System Designer
+                        </div>
+                        <div class="project-images">
+                            <span class="img-wrap" data-tooltip="Xenolith Screenshot 1"><img src="images/Xenolith-1.jpg" loading="lazy" onclick="window.open(this.src,'_blank')" alt="Xenolith Screenshot 1"></span>
+                            <span class="img-wrap" data-tooltip="Xenolith Screenshot 2"><img src="images/Xenolith-2.jpg" loading="lazy" onclick="window.open(this.src,'_blank')" alt="Xenolith Screenshot 2"></span>
+                            <span class="img-wrap" data-tooltip="Xenolith Screenshot 3"><img src="images/Xenolith-3.jpg" loading="lazy" onclick="window.open(this.src,'_blank')" alt="Xenolith Screenshot 3"></span>
+                            <span class="img-wrap" data-tooltip="Xenolith Screenshot 4"><img src="images/Xenolith-4.jpg" loading="lazy" onclick="window.open(this.src,'_blank')" alt="Xenolith Screenshot 4"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CSCO -->
+                <div class="accordion-group">
+                    <button class="accordion" style="background-image:url(images/CSCO-Header.jpg)" aria-expanded="false">
+                        <span class="accordion-label">Classic Offensive - CS:GO Mod</span>
+                        <span class="accordion-arrow"></span>
+                    </button>
+                    <div class="accordion-content" aria-hidden="true">
+                        <div class="project-body" data-markdown>
+                            ## About
+                            Counter-Strike: Classic Offensive was a fan-made overhaul for Counter-Strike: Global Offensive
+                            that aimed to recreate the gameplay and atmosphere of the earlier Counter-Strike titles,
+                            particularly **Counter-Strike 1.6** and **Counter-Strike: Source** .
+                            It brought back classic maps, weapons, and game modes while retaining the updated engine and
+                            mechanics of CS.
+
+                            The mod was designed for players who prefer the older, more traditional Counter-Strike experience
+                            with the modern improvements in graphics and performance from CS.
+
+                            ## My Role
+                            - Lead Level Designer
+                            - Design, asset, and texture creation on **de_nuke**
+                            - Short-term contribution on **de_dust 2**
+                            - Focused on maintaining visual consistency with classic CS aesthetics
+                            - Collaborated with the environment art team on material standards
+                        </div>
+                        <div class="project-images">
+                            <span class="img-wrap" data-tooltip="CSCO Screenshot 1"><img src="images/CSCO-1.jpg" loading="lazy" onclick="window.open(this.src,'_blank')" alt="CSCO Screenshot 1"></span>
+                            <span class="img-wrap" data-tooltip="CSCO Screenshot 2"><img src="images/CSCO-2.jpg" loading="lazy" onclick="window.open(this.src,'_blank')" alt="CSCO Screenshot 2"></span>
+                            <span class="img-wrap" data-tooltip="CSCO Screenshot 3"><img src="images/CSCO-3.jpg" loading="lazy" onclick="window.open(this.src,'_blank')" alt="CSCO Screenshot 3"></span>
+                            <span class="img-wrap" data-tooltip="CSCO Screenshot 4"><img src="images/CSCO-4.jpg" loading="lazy" onclick="window.open(this.src,'_blank')" alt="CSCO Screenshot 4"></span>
+                            <span class="img-wrap" data-tooltip="CSCO Screenshot 5"><img src="images/CSCO-5.jpg" loading="lazy" onclick="window.open(this.src,'_blank')" alt="CSCO Screenshot 5"></span>
+                            <span class="img-wrap" data-tooltip="CSCO Screenshot 6"><img src="images/CSCO-6.jpg" loading="lazy" onclick="window.open(this.src,'_blank')" alt="CSCO Screenshot 6"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- F4CW -->
+                <div class="accordion-group">
+                    <button class="accordion" style="background-image:url(images/F4CW-Header.jpg)" aria-expanded="false">
+                        <span class="accordion-label">Capital Wasteland - Fallout 4 Mod</span>
+                        <span class="accordion-arrow"></span>
+                    </button>
+                    <div class="accordion-content" aria-hidden="true">
+                        <div class="project-body" data-markdown>
+                            ## About
+                            Fallout 4: Capital Wasteland is a large scale fan-made mod for **Fallout 4** that aimed to
+                            recreate the setting of **Fallout 3** , focusing on the Capital Wasteland - the devastated region
+                            surrounding Washington, D.C.
+
+                            The mod reimagines the familiar world of Fallout 3, allowing players to explore the same locations
+                            and encounter similar factions, enemies, and quests, but with the enhanced visuals and mechanics of
+                            Fallout 4.
+                            It essentially combines the narrative and environment of Fallout 3 with the gameplay improvements
+                            and engine of Fallout 4.
+
+                            ## My Role
+                            - Senior Level Designer & World Event Programmer
+                            - Built over **600 exterior/interior world space cells**
+                            - Contributed to private repositories multiple time a week for over a year and half
+                            - Collaborated closely with the lead designers and world-building teams
+                            - Ensured consistency between Fallout 3's original layouts and the new engine
+                        </div>
+                        <div class="project-images">
+                            <span class="img-wrap" data-tooltip="F4CW Screenshot 1"><img src="images/F4CW-1.jpg" loading="lazy" onclick="window.open(this.src,'_blank')" alt="F4CW Screenshot 1"></span>
+                            <span class="img-wrap" data-tooltip="F4CW Screenshot 2"><img src="images/F4CW-2.jpg" loading="lazy" onclick="window.open(this.src,'_blank')" alt="F4CW Screenshot 2"></span>
+                            <span class="img-wrap" data-tooltip="F4CW Screenshot 3"><img src="images/F4CW-3.jpg" loading="lazy" onclick="window.open(this.src,'_blank')" alt="F4CW Screenshot 3"></span>
+                            <span class="img-wrap" data-tooltip="F4CW Screenshot 4"><img src="images/F4CW-4.jpg" loading="lazy" onclick="window.open(this.src,'_blank')" alt="F4CW Screenshot 4"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Ark Maintenance -->
+                <div class="accordion-group">
+                    <button class="accordion" style="background-image:url(images/Ark-Header.jpg)" aria-expanded="false">
+                        <span class="accordion-label">Ark Maintenance - Godot</span>
+                        <span class="accordion-arrow"></span>
+                    </button>
+                    <div class="accordion-content" aria-hidden="true">
+                        <div class="project-body" data-markdown>
+                            ## About
+                            Ark Maintenance is a 14 day narrative experience set in a retro 3D environment with a
+                            psychological looping story.
+
+                            The year is unknown; you awake out of a stasis pod suffering from mild amnesia while you are
+                            greeted by one of your crew members.
+                            *You were chosen to be this years maintenance person through "the yearly work lottery".*
+
+                            Upon starting work you are greeted by several other crew members.
+                            - Captain, Seraphina Voss
+                            - Book Keeper, Meera Khanna
+                            - Chef, Niko Moretti
+                            - Medical Officer, Pete Blajevic
+                            And a previously chosen worker hiding away unknown to the rest of the crew.
+
+                            You are given many choices during the course of the story, including Mutiny, Murder, Lies,
+                            Infection, and Sabotage.
+
+
+
+                            This is that lore rich shelved 3D project that I mentioned, code-named "Ark Maintenance". This was
+                            a passion project made by me and my significant other who is also in IT!
+                            Eventually we decided to put this project on hold so she could focus on work and her schooling.
+                            Truthfully after releasing the demo, and playtesting with friends and family we both achieved what
+                            we wanted with Ark Maintenance and didn't seek further interations!
+
+                            ## Her Role
+                            - Lead Artist & Writer
+
+                            ## My Role
+                            - Lead Programmer & Writer
+                        </div>
+                        <div class="project-images">
+                            <span class="img-wrap" data-tooltip="Ark Maintenance Screenshot 1"><img src="images/Ark-1.jpg" loading="lazy" onclick="window.open(this.src,'_blank')" alt="Ark Maintenance Screenshot 1"></span>
+                            <span class="img-wrap" data-tooltip="Ark Maintenance Screenshot 2"><img src="images/Ark-2.jpg" loading="lazy" onclick="window.open(this.src,'_blank')" alt="Ark Maintenance Screenshot 2"></span>
+                            <span class="img-wrap" data-tooltip="Ark Maintenance Art 1"><img src="images/Ark-3.jpg" loading="lazy" onclick="window.open(this.src,'_blank')" alt="Ark Maintenance Art 1"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Extra -->
+                <div class="accordion-group">
+                    <button class="accordion" style="background-image:url(images/Extra-Header.jpg)" aria-expanded="false">
+                        <span class="accordion-label">Extra - Projects & Information</span>
+                        <span class="accordion-arrow"></span>
+                    </button>
+                    <div class="accordion-content" aria-hidden="true">
+                        <div class="project-body" data-markdown>
+                            ## About
+                            Steelhead was a CS:GO map that was sadly never published but went through tons of interations and
+                            playtests.
+                            I was the sole developer, artist, and designer for this competitive map.
+                            Steelhead was scheduled to release in early 2024 but with the CS2 release in late 2023 it replaced
+                            the previous engine, thus killing the ongoing project Steelhead.
+
+                            Me and a friend participated and attempted a Game Jam half way into 2024, our scope ended up being
+                            too big and we missed the submission deadline.
+                            However it was still a cool concept inspired by Link to the Past and also a great learning
+                            experience for me! This was made in Unity!
+
+                            ## My Role
+                            - Lead Programmer & Artist (Game Jam)
+                            - Lead Developer & Designer (Steelhead)
+                        </div>
+                        <div class="project-images">
+                            <span class="img-wrap" data-tooltip="Game Jam Screenshot 1"><img src="images/Extra-1.jpg" loading="lazy" onclick="window.open(this.src,'_blank')" alt="Game Jam Screenshot 1"></span>
+                            <span class="img-wrap" data-tooltip="Game Jam Screenshot 2"><img src="images/Extra-2.jpg" loading="lazy" onclick="window.open(this.src,'_blank')" alt="Game Jam Screenshot 2"></span>
+                            <span class="img-wrap" data-tooltip="Game Jam Screenshot 3"><img src="images/Extra-3.jpg" loading="lazy" onclick="window.open(this.src,'_blank')" alt="Game Jam Screenshot 3"></span>
+                            <span class="img-wrap" data-tooltip="Game Jam Screenshot 4"><img src="images/Extra-4.jpg" loading="lazy" onclick="window.open(this.src,'_blank')" alt="Game Jam Screenshot 4"></span>
+                            <span class="img-wrap" data-tooltip="Steelhead Screenshot 1"><img src="images/Extra-5.jpg" loading="lazy" onclick="window.open(this.src,'_blank')" alt="Steelhead Screenshot 1"></span>
+                            <span class="img-wrap" data-tooltip="Steelhead Screenshot 2"><img src="images/Extra-6.jpg" loading="lazy" onclick="window.open(this.src,'_blank')" alt="Steelhead Screenshot 2"></span>
+                            <span class="img-wrap" data-tooltip="Steelhead Screenshot 3"><img src="images/Extra-7.jpg" loading="lazy" onclick="window.open(this.src,'_blank')" alt="Steelhead Screenshot 3"></span>
+                            <span class="img-wrap" data-tooltip="Steelhead Screenshot 4"><img src="images/Extra-8.jpg" loading="lazy" onclick="window.open(this.src,'_blank')" alt="Steelhead Screenshot 4"></span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- RESUME & ABOUT -->
+            <section id="Resume" class="tabcontent" role="tabpanel">
+                <div class="resume-body" data-markdown>
+                    ## About Me
+                    I am a Game Developer driven by a passion for building complete, immersive worlds.
+                    I started my journey young modding Source Engine titles, which quickly turned into a desire to learn
+                    every discipline involved in game creation.
+
+                    I have extensive experience across multiple engines, including 2D or 3D pipelines.
+                    I've contributed to large-scale singleplayer mod content, built competitive multiplayer maps, and
+                    developed original games from the ground up. Independently and in collaborative dev teams.
+
+                    **I also have hundreds of pages worth of design documentation over the years, including lore and system
+                        architecture for my various amount of contributed projects!**
+
+                    Some of which includes a lore rich shelved 3D project, code-named "Ark Maintenance" and an even more
+                    lore and design rich 2D story platformer code-named "Xenolith".
+
+                    I transitioned away from existing engine frameworks (Godot & Unity) to build my own C# engine using .NET
+                    and MonoGame, giving me absolute control over the architecture of my current independent 2D project.
+
+
+                    ## Technical Experience
+
+                    **Programming:**
+                    C#, C++, GDScript, Python, Git, and Java.
+
+
+                    **Engine Development:**
+                    Custom C# Engine (MonoGame/.NET), Godot, Unity, Source Engine, and CreationKit.
+
+
+                    **Design:**
+                    2D/3D Level Design, Gameplay Designs, Worldspace Encounters, Save/Load Systems, Proper Design
+                    Documentation.
+
+
+                    **Narrative Design:**
+                    Lore, Dialogue, Personalities, Gameplay Systems, and Environmental Storytelling.
+
+
+                    **Debugging:**
+                    Profiling, Version Control, Engine and Game Level Optimization.
+
+
+                    **Art & Animation:**
+                    Modeling, Texturing, Rigging, Pixel Art, and 2D/3D Animation. (Blender/3dsMax & Aseprite)
+
+                    ## Contact Information
+
+                    CDT (UTC-5) - Houston, TX
+                    [contact@malenarivas.com](mailto:contact@malenarivas.com)
+                    [LinkedIn Profile](https://www.linkedin.com/in/malena-rivas-7b910b329)
+
+
+                </div>
+            </section>
+
+            <!-- ── Footer (always visible, outside tab sections) ── -->
+            <footer class="site-footer">
+                <p>&copy; Malena Rivas</p>
+                <p>All content and trademarks property of their respective owners.</p>
+            </footer>
         </div>
-      </div>
+    </main>
 
-      <!-- F4CW -->
-      <div class="accordion-group">
-        <button class="accordion" style="background-image:url(images/F4CW-Header.jpg)" aria-expanded="false">
-          <span class="accordion-label">Capital Wasteland - Fallout 4 Mod</span>
-          <span class="accordion-arrow"></span>
-        </button>
-        <div class="accordion-content" aria-hidden="true">
-          <div class="project-body" data-markdown>
-## About
-Fallout 4: Capital Wasteland is a large scale fan-made mod for **Fallout 4** that aimed to recreate the setting of **Fallout 3**, focusing on the Capital Wasteland - the devastated region surrounding Washington, D.C.
+    <script>
+        function parseMarkdown(text) {
+            text = text.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
 
-The mod reimagines the familiar world of Fallout 3, allowing players to explore the same locations and encounter similar factions, enemies, and quests, but with the enhanced visuals and mechanics of Fallout 4. 
-It essentially combines the narrative and environment of Fallout 3 with the gameplay improvements and engine of Fallout 4.
+            const inline = (s) => {
+                s = s.replace(/\*\*\*(.+?)\*\*\*/g, '<strong><em>$1</em></strong>');
+                s = s.replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>');
+                s = s.replace(/\*(.+?)\*/g, '<em>$1</em>');
+                s = s.replace(
+                    /\[(.+?)\]\((.+?)\)/g,
+                    '<a href="$2" target="_blank" rel="noopener">$1</a>'
+                );
+                return s;
+            };
 
-## My Role
-- Senior Level Designer & World Event Programmer
-- Built over **600 exterior/interior world space cells**
-- Contributed to private repositories multiple time a week for over a year and half
-- Collaborated closely with the lead designers and world-building teams
-- Ensured consistency between Fallout 3's original layouts and the new engine
-          </div>
-          <div class="project-images">
-            <span class="img-wrap" data-tooltip="F4CW Screenshot 1"><img src="images/F4CW-1.jpg" loading="lazy" onclick="window.open(this.src,'_blank')" alt="F4CW Screenshot 1"></span>
-            <span class="img-wrap" data-tooltip="F4CW Screenshot 2"><img src="images/F4CW-2.jpg" loading="lazy" onclick="window.open(this.src,'_blank')" alt="F4CW Screenshot 2"></span>
-            <span class="img-wrap" data-tooltip="F4CW Screenshot 3"><img src="images/F4CW-3.jpg" loading="lazy" onclick="window.open(this.src,'_blank')" alt="F4CW Screenshot 3"></span>
-            <span class="img-wrap" data-tooltip="F4CW Screenshot 4"><img src="images/F4CW-4.jpg" loading="lazy" onclick="window.open(this.src,'_blank')" alt="F4CW Screenshot 4"></span>
-          </div>
-        </div>
-      </div>
+            const lines = text.split('\n');
+            const out = [];
+            let inList = false;
+            let inPara = false;
 
-      <!-- Ark Maintenance -->
-      <div class="accordion-group">
-        <button class="accordion" style="background-image:url(images/Ark-Header.jpg)" aria-expanded="false">
-          <span class="accordion-label">Ark Maintenance - Godot</span>
-          <span class="accordion-arrow"></span>
-        </button>
-        <div class="accordion-content" aria-hidden="true">
-          <div class="project-body" data-markdown>
-## About
-Ark Maintenance is a 14 day narrative experience set in a retro 3D environment with a psychological looping story.
+            for (let i = 0; i < lines.length; i++) {
+                const line = lines[i].trim();
 
-The year is unknown; you awake out of a stasis pod suffering from mild amnesia while you are greeted by one of your crew members.
-*You were chosen to be this years maintenance person through "the yearly work lottery".*
+                if (!line) {
+                    if (inList) { out.push('</ul>');
+                        inList = false; }
+                    if (inPara) { out.push('</p>');
+                        inPara = false; }
+                    continue;
+                }
 
-Upon starting work you are greeted by several other crew members.
-- Captain, Seraphina Voss
-- Book Keeper, Meera Khanna
-- Chef, Niko Moretti
-- Medical Officer, Pete Blajevic
-And a previously chosen worker hiding away unknown to the rest of the crew.
+                if (line.startsWith('### ') || line.startsWith('## ') || line.startsWith('# ')) {
+                    if (inList) { out.push('</ul>');
+                        inList = false; }
+                    if (inPara) { out.push('</p>');
+                        inPara = false; }
+                    if (line.startsWith('### ')) out.push('<h3>' + inline(line.slice(4)) + '</h3>');
+                    else if (line.startsWith('## ')) out.push('<h2>' + inline(line.slice(3)) + '</h2>');
+                    else out.push('<h1>' + inline(line.slice(2)) + '</h1>');
+                    continue;
+                }
 
-You are given many choices during the course of the story, including Mutiny, Murder, Lies, Infection, and Sabotage.
+                if (line.startsWith('- ')) {
+                    if (inPara) { out.push('</p>');
+                        inPara = false; }
+                    if (!inList) { out.push('<ul>');
+                        inList = true; }
+                    out.push('<li>' + inline(line.slice(2)) + '</li>');
+                    continue;
+                }
 
+                if (inList) { out.push('</ul>');
+                    inList = false; }
+                if (!inPara) { out.push('<p>' + inline(line));
+                    inPara = true; } else { out.push('<br>' + inline(line)); }
+            }
 
-
-This is that lore rich shelved 3D project that I mentioned, code-named "Ark Maintenance". This was a passion project made by me and my significant other who is also in IT!
-Eventually we decided to put this project on hold so she could focus on work and her schooling.
-Truthfully after releasing the demo, and playtesting with friends and family we both achieved what we wanted with Ark Maintenance and didn't seek further interations!
-
-## Her Role
-- Lead Artist & Writer
-
-## My Role
-- Lead Programmer & Writer
-          </div>
-          <div class="project-images">
-            <span class="img-wrap" data-tooltip="Ark Maintenance Screenshot 1"><img src="images/Ark-1.jpg" loading="lazy" onclick="window.open(this.src,'_blank')" alt="Ark Maintenance Screenshot 1"></span>
-            <span class="img-wrap" data-tooltip="Ark Maintenance Screenshot 2"><img src="images/Ark-2.jpg" loading="lazy" onclick="window.open(this.src,'_blank')" alt="Ark Maintenance Screenshot 2"></span>
-            <span class="img-wrap" data-tooltip="Ark Maintenance Art 1"><img src="images/Ark-3.jpg" loading="lazy" onclick="window.open(this.src,'_blank')" alt="Ark Maintenance Art 1"></span>
-          </div>
-        </div>
-      </div>
-
-      <!-- Extra -->
-      <div class="accordion-group">
-        <button class="accordion" style="background-image:url(images/Extra-Header.jpg)" aria-expanded="false">
-          <span class="accordion-label">Extra - Projects & Information</span>
-          <span class="accordion-arrow"></span>
-        </button>
-        <div class="accordion-content" aria-hidden="true">
-          <div class="project-body" data-markdown>
-## About
-Steelhead was a CS:GO map that was sadly never published but went through tons of interations and playtests.
-I was the sole developer, artist, and designer for this competitive map.
-Steelhead was scheduled to release in early 2024 but with the CS2 release in late 2023 it replaced the previous engine, thus killing the ongoing project Steelhead.
-
-Me and a friend participated and attempted a Game Jam half way into 2024, our scope ended up being too big and we missed the submission deadline.
-However it was still a cool concept inspired by Link to the Past and also a great learning experience for me! This was made in Unity!
-
-## My Role
-- Lead Programmer & Artist (Game Jam)
-- Lead Developer & Designer (Steelhead)
-          </div>
-          <div class="project-images">
-            <span class="img-wrap" data-tooltip="Game Jam Screenshot 1"><img src="images/Extra-1.jpg" loading="lazy" onclick="window.open(this.src,'_blank')" alt="Game Jam Screenshot 1"></span>
-            <span class="img-wrap" data-tooltip="Game Jam Screenshot 2"><img src="images/Extra-2.jpg" loading="lazy" onclick="window.open(this.src,'_blank')" alt="Game Jam Screenshot 2"></span>
-            <span class="img-wrap" data-tooltip="Game Jam Screenshot 3"><img src="images/Extra-3.jpg" loading="lazy" onclick="window.open(this.src,'_blank')" alt="Game Jam Screenshot 3"></span>
-            <span class="img-wrap" data-tooltip="Game Jam Screenshot 4"><img src="images/Extra-4.jpg" loading="lazy" onclick="window.open(this.src,'_blank')" alt="Game Jam Screenshot 4"></span>
-            <span class="img-wrap" data-tooltip="Steelhead Screenshot 1"><img src="images/Extra-5.jpg" loading="lazy" onclick="window.open(this.src,'_blank')" alt="Steelhead Screenshot 1"></span>
-            <span class="img-wrap" data-tooltip="Steelhead Screenshot 2"><img src="images/Extra-6.jpg" loading="lazy" onclick="window.open(this.src,'_blank')" alt="Steelhead Screenshot 2"></span>
-            <span class="img-wrap" data-tooltip="Steelhead Screenshot 3"><img src="images/Extra-7.jpg" loading="lazy" onclick="window.open(this.src,'_blank')" alt="Steelhead Screenshot 3"></span>
-            <span class="img-wrap" data-tooltip="Steelhead Screenshot 4"><img src="images/Extra-8.jpg" loading="lazy" onclick="window.open(this.src,'_blank')" alt="Steelhead Screenshot 4"></span>
-          </div>
-        </div>
-      </div>
-      ‎ 
-      ‎ 
-    <p style="display:flex; justify-content:center; align-items:center;">© Malena Rivas</p>
-    <p style="display:flex; justify-content:center; align-items:center;">All content and trademarks property of their respective owners.</p>
-
-    </section>
-
-    <!-- RESUME & ABOUT -->
-    <section id="Resume" class="tabcontent" role="tabpanel">
-      <div class="resume-body" data-markdown>
-## About Me
-I am a Game Developer driven by a passion for building complete, immersive worlds. 
-I started my journey young modding Source Engine titles, which quickly turned into a desire to learn every discipline involved in game creation. 
-
-I have extensive experience across multiple engines, including 2D or 3D pipelines. 
-I've contributed to large-scale singleplayer mod content, built competitive multiplayer maps, and developed original games from the ground up. Independently and in collaborative dev teams.
-
-**I also have hundreds of pages worth of design documentation over the years, including lore and system architecture for my various amount of contributed projects!**
-
-Some of which includes a lore rich shelved 3D project, code-named "Ark Maintenance" and an even more lore and design rich 2D story platformer code-named "Xenolith".
-
-I transitioned away from existing engine frameworks (Godot & Unity) to build my own C# engine using .NET and MonoGame, giving me absolute control over the architecture of my current independent 2D project.
-‎ 
-‎ 
-## Technical Experience
-
-**Programming:**
-C#, C++, GDScript, Python, Git, and Java.
-
-
-**Engine Development:** 
-Custom C# Engine (MonoGame/.NET), Godot, Unity, Source Engine, and CreationKit.
-
-
-**Design:**
-2D/3D Level Design, Gameplay Designs, Worldspace Encounters, Save/Load Systems, Proper Design Documentation.
-
-
-**Narrative Design:**
-Lore, Dialogue, Personalities, Gameplay Systems, and Environmental Storytelling.
-
-
-**Debugging:**
-Profiling, Version Control, Engine and Game Level Optimization.
-
-
-**Art & Animation:**
-Modeling, Texturing, Rigging, Pixel Art, and 2D/3D Animation. (Blender/3dsMax & Aseprite)
-‎ 
-## Contact Information
-
-CDT (UTC-5) - Houston, TX
-[contact@malenarivas.com](mailto:contact@malenarivas.com)
-[LinkedIn Profile](https://www.linkedin.com/in/malena-rivas-7b910b329)
-‎ 
-‎ 
-    </div>
-    <p style="display:flex; justify-content:center; align-items:center;">© Malena Rivas</p>
-    <p style="display:flex; justify-content:center; align-items:center;">All content and trademarks property of their respective owners.</p>
-    </section>
-  </div>
-</main>
-
-<script>
-function parseMarkdown(text) {
-  text = text.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
-
-  const inline = (s) => {
-    s = s.replace(/\*\*\*(.+?)\*\*\*/g, '<strong><em>$1</em></strong>');
-    s = s.replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>');
-    s = s.replace(/\*(.+?)\*/g, '<em>$1</em>');
-    s = s.replace(/\[(.+?)\]\((.+?)\)/g, '<a href="$2" target="_blank" rel="noopener">$1</a>');
-    return s;
-  };
-
-  const lines = text.split('\n');
-  const out = [];
-  let inList = false;
-  let inPara = false;
-
-  for (let i = 0; i < lines.length; i++) {
-    const line = lines[i].trim();
-
-    if (!line) {
-      if (inList) { out.push('</ul>'); inList = false; }
-      if (inPara) { out.push('</p>'); inPara = false; }
-      continue;
-    }
-
-    if (line.startsWith('### ') || line.startsWith('## ') || line.startsWith('# ')) {
-      if (inList) { out.push('</ul>'); inList = false; }
-      if (inPara) { out.push('</p>'); inPara = false; }
-      if (line.startsWith('### '))      out.push('<h3>' + inline(line.slice(4)) + '</h3>');
-      else if (line.startsWith('## '))  out.push('<h2>' + inline(line.slice(3)) + '</h2>');
-      else                               out.push('<h1>' + inline(line.slice(2)) + '</h1>');
-      continue;
-    }
-
-    if (line.startsWith('- ')) {
-      if (inPara) { out.push('</p>'); inPara = false; }
-      if (!inList) { out.push('<ul>'); inList = true; }
-      out.push('<li>' + inline(line.slice(2)) + '</li>');
-      continue;
-    }
-
-    if (inList) { out.push('</ul>'); inList = false; }
-    if (!inPara) { out.push('<p>' + inline(line)); inPara = true; }
-    else { out.push('<br>' + inline(line)); }
-  }
-
-  if (inList) out.push('</ul>');
-  if (inPara) out.push('</p>');
-  return out.join('\n');
-}
-
-document.querySelectorAll('[data-markdown]').forEach(el => {
-  el.innerHTML = parseMarkdown(el.textContent.trim());
-});
-
-
-document.querySelectorAll('.tabLinks').forEach(btn => {
-  btn.addEventListener('click', () => {
-    document.querySelectorAll('.tabLinks').forEach(b => {
-      b.classList.remove('active');
-      b.setAttribute('aria-selected', 'false');
-    });
-    document.querySelectorAll('.tabcontent').forEach(c => c.classList.remove('active'));
-
-    btn.classList.add('active');
-    btn.setAttribute('aria-selected', 'true');
-    document.getElementById(btn.dataset.tab).classList.add('active');
-
-    document.querySelectorAll('.accordion.active').forEach(a => {
-      a.classList.remove('active');
-      a.setAttribute('aria-expanded', 'false');
-      a.nextElementSibling.style.maxHeight = null;
-      a.nextElementSibling.setAttribute('aria-hidden', 'true');
-    });
-  });
-});
-
-
-document.querySelectorAll('.accordion').forEach(btn => {
-  btn.addEventListener('click', () => {
-    const content = btn.nextElementSibling;
-    const wasOpen = btn.classList.contains('active');
-
-    document.querySelectorAll('.accordion').forEach(a => {
-      a.classList.remove('active');
-      a.setAttribute('aria-expanded', 'false');
-      a.nextElementSibling.style.maxHeight = null;
-      a.nextElementSibling.setAttribute('aria-hidden', 'true');
-    });
-
-    if (!wasOpen) {
-      btn.classList.add('active');
-      btn.setAttribute('aria-expanded', 'true');
-      content.style.maxHeight = content.scrollHeight + 'px';
-      requestAnimationFrame(() => { content.style.maxHeight = content.scrollHeight + 'px'; });
-      content.setAttribute('aria-hidden', 'false');
-    }
-  });
-});
-
-
-const header = document.getElementById('site-header');
-window.addEventListener('scroll', () => {
-  header.classList.toggle('scrolled', window.scrollY > 8);
-}, { passive: true });
-
-
-(function () {
-  const month = new Date().getMonth();
-  const isWinter = (month === 11 || month === 0 || month === 1);
-  if (!isWinter) return;
-  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-
-  const canvas = document.createElement('canvas');
-  canvas.id = 'snow-canvas';
-  document.body.appendChild(canvas);
-  const ctx = canvas.getContext('2d');
-
-  const CENTER_MAX = 900;
-  let cLeft, cRight;
-
-  function resize() {
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
-    const w = Math.min(CENTER_MAX, window.innerWidth);
-    cLeft = (window.innerWidth - w) / 2;
-    cRight = cLeft + w;
-  }
-  resize();
-  window.addEventListener('resize', resize);
-
-  const COUNT = 100;
-  const flakes = Array.from({ length: COUNT }, () => {
-    const side = Math.random() < 0.5 ? 'left' : 'right';
-    const x = side === 'left'
-      ? Math.random() * Math.max(cLeft - 10, 1)
-      : cRight + 10 + Math.random() * Math.max(window.innerWidth - cRight - 10, 1);
-    return {
-      x,
-      y: Math.random() * window.innerHeight,
-      r: Math.random() * 2.5 + 0.8,
-      speed: Math.random() * 1.2 + 0.4,
-      wind: Math.random() * 0.3 - 0.15,
-      opacity: Math.random() * 0.3 + 0.1,
-      wobble: Math.random() * Math.PI * 2,
-      side
-    };
-  });
-
-  function frame() {
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
-    for (const f of flakes) {
-      ctx.beginPath();
-      ctx.arc(f.x, f.y, f.r, 0, Math.PI * 2);
-      ctx.fillStyle = 'rgba(255,255,255,' + f.opacity + ')';
-      ctx.fill();
-
-      f.y += f.speed;
-      f.wobble += 0.012;
-      f.x += f.wind + Math.sin(f.wobble) * 0.4;
-
-      if (f.y > canvas.height + 5) {
-        f.y = -5;
-        if (f.side === 'left') {
-          f.x = Math.random() * Math.max(cLeft - 10, 1);
-        } else {
-          f.x = cRight + 10 + Math.random() * Math.max(window.innerWidth - cRight - 10, 1);
+            if (inList) out.push('</ul>');
+            if (inPara) out.push('</p>');
+            return out.join('\n');
         }
-      }
 
-      if (f.side === 'left' && f.x > cLeft - 5) f.x = cLeft - 10 - Math.random() * 20;
-      if (f.side === 'right' && f.x < cRight + 5) f.x = cRight + 10 + Math.random() * 20;
-    }
-    requestAnimationFrame(frame);
-  }
-  frame();
-})();
-</script>
+        document.querySelectorAll('[data-markdown]').forEach(el => {
+            el.innerHTML = parseMarkdown(el.textContent.trim());
+        });
 
+        // ── Tab Switching ──
+        document.querySelectorAll('.tabLinks').forEach(btn => {
+            btn.addEventListener('click', () => {
+                document.querySelectorAll('.tabLinks').forEach(b => {
+                    b.classList.remove('active');
+                    b.setAttribute('aria-selected', 'false');
+                });
+                document.querySelectorAll('.tabcontent').forEach(c => c.classList.remove(
+                'active'));
+
+                btn.classList.add('active');
+                btn.setAttribute('aria-selected', 'true');
+                document.getElementById(btn.dataset.tab).classList.add('active');
+
+                // Close all accordions on tab switch
+                document.querySelectorAll('.accordion.active').forEach(a => {
+                    a.classList.remove('active');
+                    a.setAttribute('aria-expanded', 'false');
+                    a.nextElementSibling.style.maxHeight = null;
+                    a.nextElementSibling.setAttribute('aria-hidden', 'true');
+                });
+            });
+        });
+
+        // ── Accordion (with image-load-aware height calculation) ──
+        document.querySelectorAll('.accordion').forEach(btn => {
+            btn.addEventListener('click', () => {
+                const content = btn.nextElementSibling;
+                const wasOpen = btn.classList.contains('active');
+
+                // Close all accordions first
+                document.querySelectorAll('.accordion').forEach(a => {
+                    a.classList.remove('active');
+                    a.setAttribute('aria-expanded', 'false');
+                    a.nextElementSibling.style.maxHeight = null;
+                    a.nextElementSibling.setAttribute('aria-hidden', 'true');
+                });
+
+                if (!wasOpen) {
+                    btn.classList.add('active');
+                    btn.setAttribute('aria-expanded', 'true');
+
+                    const updateHeight = () => {
+                        content.style.maxHeight = content.scrollHeight + 'px';
+                    };
+
+                    // Set initial height
+                    updateHeight();
+
+                    // Recalculate after all images inside have loaded
+                    const images = content.querySelectorAll('img');
+                    let pending = 0;
+                    images.forEach(img => {
+                        if (!img.complete) {
+                            pending++;
+                            img.addEventListener('load', () => {
+                                pending--;
+                                if (pending === 0) updateHeight();
+                            }, { once: true });
+                        }
+                    });
+
+                    // Double rAF fallback for cached images that still need layout
+                    requestAnimationFrame(() => {
+                        requestAnimationFrame(() => updateHeight());
+                    });
+
+                    content.setAttribute('aria-hidden', 'false');
+                }
+            });
+        });
+
+        // ── Scroll class on header ──
+        const header = document.getElementById('site-header');
+        window.addEventListener('scroll', () => {
+            header.classList.toggle('scrolled', window.scrollY > 8);
+        }, { passive: true });
+
+        // ── Snow effect (winter only) ──
+        (function() {
+            const month = new Date().getMonth();
+            const isWinter = (month === 11 || month === 0 || month === 1);
+            if (!isWinter) return;
+            if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+            const canvas = document.createElement('canvas');
+            canvas.id = 'snow-canvas';
+            document.body.appendChild(canvas);
+            const ctx = canvas.getContext('2d');
+
+            const CENTER_MAX = 900;
+            let cLeft, cRight;
+
+            function resize() {
+                canvas.width = window.innerWidth;
+                canvas.height = window.innerHeight;
+                const w = Math.min(CENTER_MAX, window.innerWidth);
+                cLeft = (window.innerWidth - w) / 2;
+                cRight = cLeft + w;
+            }
+            resize();
+            window.addEventListener('resize', resize);
+
+            const COUNT = 100;
+            const flakes = Array.from({ length: COUNT }, () => {
+                const side = Math.random() < 0.5 ? 'left' : 'right';
+                const x = side === 'left' ?
+                    Math.random() * Math.max(cLeft - 10, 1) :
+                    cRight + 10 + Math.random() * Math.max(window.innerWidth - cRight - 10, 1);
+                return {
+                    x,
+                    y: Math.random() * window.innerHeight,
+                    r: Math.random() * 2.5 + 0.8,
+                    speed: Math.random() * 1.2 + 0.4,
+                    wind: Math.random() * 0.3 - 0.15,
+                    opacity: Math.random() * 0.3 + 0.1,
+                    wobble: Math.random() * Math.PI * 2,
+                    side,
+                };
+            });
+
+            function frame() {
+                ctx.clearRect(0, 0, canvas.width, canvas.height);
+                for (const f of flakes) {
+                    ctx.beginPath();
+                    ctx.arc(f.x, f.y, f.r, 0, Math.PI * 2);
+                    ctx.fillStyle = 'rgba(255,255,255,' + f.opacity + ')';
+                    ctx.fill();
+
+                    f.y += f.speed;
+                    f.wobble += 0.012;
+                    f.x += f.wind + Math.sin(f.wobble) * 0.4;
+
+                    if (f.y > canvas.height + 5) {
+                        f.y = -5;
+                        if (f.side === 'left') {
+                            f.x = Math.random() * Math.max(cLeft - 10, 1);
+                        } else {
+                            f.x = cRight + 10 + Math.random() * Math.max(window.innerWidth - cRight - 10, 1);
+                        }
+                    }
+
+                    if (f.side === 'left' && f.x > cLeft - 5) f.x = cLeft - 10 - Math.random() * 20;
+                    if (f.side === 'right' && f.x < cRight + 5) f.x = cRight + 10 + Math.random() * 20;
+                }
+                requestAnimationFrame(frame);
+            }
+            frame();
+        })();
+    </script>
 </body>
 </html>
