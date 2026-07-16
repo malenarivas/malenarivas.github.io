@@ -228,7 +228,14 @@
       padding: 4px 28px 28px;
     }
 
-    .project-images img {
+    .img-wrap {
+      position: relative;
+      display: block;
+      overflow: hidden;
+      border-radius: 4px;
+    }
+
+    .img-wrap img {
       width: 100%;
       height: auto;
       border-radius: 4px;
@@ -238,17 +245,41 @@
       box-shadow: 0 3px 12px rgba(0,0,0,0.4);
     }
 
-    .project-images img:hover {
+    .img-wrap:hover img {
       transform: scale(1.02);
       opacity: 0.85;
       box-shadow: 0 5px 20px rgba(0,0,0,0.5);
+    }
+
+    .img-wrap::after {
+      content: attr(data-tooltip);
+      position: absolute;
+      bottom: 8px;
+      left: 8px;
+      right: 8px;
+      padding: 4px 8px;
+      background: rgba(0, 0, 0, 0.78);
+      color: #c0c0c0;
+      font-size: 10.5px;
+      font-weight: 400;
+      letter-spacing: 0.3px;
+      line-height: 1.4;
+      border-radius: 3px;
+      pointer-events: none;
+      opacity: 0;
+      transform: translateY(5px);
+      transition: opacity 0.3s ease, transform 0.3s ease;
+    }
+
+    .img-wrap:hover::after {
+      opacity: 1;
+      transform: translateY(0);
     }
 
     .accordion-placeholder {
       background: linear-gradient(135deg, #1a1030 0%, #0d1a2a 50%, #1a1020 100%) !important;
     }
 
-    /* ── Header Profile Photo ── */
     .resume-photo {
       flex-shrink: 0;
       margin-left: 20px;
@@ -324,7 +355,8 @@
 
     @media (prefers-reduced-motion: reduce) {
       .accordion-content { transition: none; }
-      .project-images img { transition: none; }
+      .img-wrap img { transition: none; }
+      .img-wrap::after { transition: none; }
       .tabLinks { transition: none; }
       .header-inner { transition: none; }
     }
@@ -336,7 +368,7 @@
     <div class="header-text">
       <h1 style="font-weight: 500; font-size: 32px;">Malena Rivas</h1>
       <p class="tagline" style="font-size: 22px;">Game Developer</p>
-	  <p style="font-size: 12px; margin-top: -16px; padding-bottom: 8px; color: #808080;">contact@malenarivas.com</p>
+      <p style="font-size: 12px; margin-top: -16px; padding-bottom: 8px; color: #808080;">contact@malenarivas.com</p>
       <nav class="tab-nav" role="tablist">
         <button class="tabLinks active" data-tab="Home" role="tab" aria-selected="true">HOME</button>
         <button class="tabLinks" data-tab="Resume" role="tab" aria-selected="false">RESUME & ABOUT</button>
@@ -378,17 +410,22 @@ Thank you for reading about me!
         <div class="accordion-content" aria-hidden="true">
           <div class="project-body" data-markdown>
 ## About
-This project is currently under development. More details will be revealed soon.
+Xenolith is currently under development. More details will be revealed soon.
+
+Xenolith is a Story Driven Metroidvania that uses advanced fluid systems, light systems, and environmental storytelling to invoke a sense of dread.
+
+You play as **Diver-13 (Call-sign 'Artemis')**. 
+You are part of the Tartarus Dynamics Rescue Squad (TD-RS), trained to evacuate marine researchers and scientists working at Tartarus Dynamics in the event that any of the underwater substations fail, flood, or worse.
+The Leviathans comms went dark 14 hours ago for an unknown reason. You and the rest of your rescue squad travel to different substations to find out what happened to The Leviathan.
 
 ## My Role
-- Role details coming soon
-- More information to follow
+- Lead Writer, Developer, & System Designer
           </div>
           <div class="project-images">
-            <img src="images/Xenolith-1.jpg" loading="lazy" onclick="window.open(this.src,'_blank')" alt="Xenolith Screenshot 1">
-            <img src="images/Xenolith-2.jpg" loading="lazy" onclick="window.open(this.src,'_blank')" alt="Xenolith Screenshot 2">
-            <img src="images/Xenolith-3.jpg" loading="lazy" onclick="window.open(this.src,'_blank')" alt="Xenolith Screenshot 3">
-            <img src="images/Xenolith-4.jpg" loading="lazy" onclick="window.open(this.src,'_blank')" alt="Xenolith Screenshot 4">
+            <span class="img-wrap" data-tooltip="Xenolith Screenshot 1"><img src="images/Xenolith-1.jpg" loading="lazy" onclick="window.open(this.src,'_blank')" alt="Xenolith Screenshot 1"></span>
+            <span class="img-wrap" data-tooltip="Xenolith Screenshot 2"><img src="images/Xenolith-2.jpg" loading="lazy" onclick="window.open(this.src,'_blank')" alt="Xenolith Screenshot 2"></span>
+            <span class="img-wrap" data-tooltip="Xenolith Screenshot 3"><img src="images/Xenolith-3.jpg" loading="lazy" onclick="window.open(this.src,'_blank')" alt="Xenolith Screenshot 3"></span>
+            <span class="img-wrap" data-tooltip="Xenolith Screenshot 4"><img src="images/Xenolith-4.jpg" loading="lazy" onclick="window.open(this.src,'_blank')" alt="Xenolith Screenshot 4"></span>
           </div>
         </div>
       </div>
@@ -402,21 +439,25 @@ This project is currently under development. More details will be revealed soon.
         <div class="accordion-content" aria-hidden="true">
           <div class="project-body" data-markdown>
 ## About
-Counter-Strike: Classic Offensive is a fan-made mod for Counter-Strike: Global Offensive that aims to recreate the gameplay and atmosphere of the earlier Counter-Strike titles, particularly **Counter-Strike 1.6** and **Counter-Strike: Source**. It brings back classic maps, weapons, and game modes while retaining the updated engine and mechanics of CS.
+Counter-Strike: Classic Offensive was a fan-made overhaul for Counter-Strike: Global Offensive that aimed to recreate the gameplay and atmosphere of the earlier Counter-Strike titles, particularly **Counter-Strike 1.6** and **Counter-Strike: Source**. 
+It brought back classic maps, weapons, and game modes while retaining the updated engine and mechanics of CS.
 
-The mod is designed for players who prefer the older, more traditional Counter-Strike experience with the modern improvements in graphics and performance from CS.
+The mod was designed for players who prefer the older, more traditional Counter-Strike experience with the modern improvements in graphics and performance from CS.
 
 ## My Role
+- Lead Level Designer
 - Design, asset, and texture creation on **de_nuke**
 - Short-term contribution on **de_dust 2**
 - Focused on maintaining visual consistency with classic CS aesthetics
 - Collaborated with the environment art team on material standards
           </div>
           <div class="project-images">
-            <img src="images/CSCO-1.jpg" loading="lazy" onclick="window.open(this.src,'_blank')" alt="CSCO Screenshot 1">
-            <img src="images/CSCO-2.jpg" loading="lazy" onclick="window.open(this.src,'_blank')" alt="CSCO Screenshot 2">
-            <img src="images/CSCO-3.jpg" loading="lazy" onclick="window.open(this.src,'_blank')" alt="CSCO Screenshot 3">
-            <img src="images/CSCO-4.jpg" loading="lazy" onclick="window.open(this.src,'_blank')" alt="CSCO Screenshot 4">
+            <span class="img-wrap" data-tooltip="CSCO Screenshot 1"><img src="images/CSCO-1.jpg" loading="lazy" onclick="window.open(this.src,'_blank')" alt="CSCO Screenshot 1"></span>
+            <span class="img-wrap" data-tooltip="CSCO Screenshot 2"><img src="images/CSCO-2.jpg" loading="lazy" onclick="window.open(this.src,'_blank')" alt="CSCO Screenshot 2"></span>
+            <span class="img-wrap" data-tooltip="CSCO Screenshot 3"><img src="images/CSCO-3.jpg" loading="lazy" onclick="window.open(this.src,'_blank')" alt="CSCO Screenshot 3"></span>
+            <span class="img-wrap" data-tooltip="CSCO Screenshot 4"><img src="images/CSCO-4.jpg" loading="lazy" onclick="window.open(this.src,'_blank')" alt="CSCO Screenshot 4"></span>
+            <span class="img-wrap" data-tooltip="CSCO Screenshot 5"><img src="images/CSCO-5.jpg" loading="lazy" onclick="window.open(this.src,'_blank')" alt="CSCO Screenshot 5"></span>
+            <span class="img-wrap" data-tooltip="CSCO Screenshot 6"><img src="images/CSCO-6.jpg" loading="lazy" onclick="window.open(this.src,'_blank')" alt="CSCO Screenshot 6"></span>
           </div>
         </div>
       </div>
@@ -430,22 +471,23 @@ The mod is designed for players who prefer the older, more traditional Counter-S
         <div class="accordion-content" aria-hidden="true">
           <div class="project-body" data-markdown>
 ## About
-Fallout 4: Capital Wasteland is a large scale fan-made mod for **Fallout 4** that aims to recreate the setting of **Fallout 3**, focusing on the Capital Wasteland - the devastated region surrounding Washington, D.C.
+Fallout 4: Capital Wasteland is a large scale fan-made mod for **Fallout 4** that aimed to recreate the setting of **Fallout 3**, focusing on the Capital Wasteland - the devastated region surrounding Washington, D.C.
 
-The mod reimagines the familiar world of Fallout 3, allowing players to explore the same locations and encounter similar factions, enemies, and quests, but with the enhanced visuals and mechanics of Fallout 4. It essentially combines the narrative and environment of Fallout 3 with the gameplay improvements and engine of Fallout 4.
+The mod reimagines the familiar world of Fallout 3, allowing players to explore the same locations and encounter similar factions, enemies, and quests, but with the enhanced visuals and mechanics of Fallout 4. 
+It essentially combines the narrative and environment of Fallout 3 with the gameplay improvements and engine of Fallout 4.
 
 ## My Role
+- Senior Level Designer & World Event Programmer
 - Built over **600 exterior/interior world space cells**
-- Contributed to repositories weekly for over a year
-- Earned the title of **Senior Level Designer**
-- Collaborated closely with the level design and world-building teams
-- Ensured spatial consistency between Fallout 3's original layouts and the new engine
+- Contributed to private repositories multiple time a week for over a year and half
+- Collaborated closely with the lead designers and world-building teams
+- Ensured consistency between Fallout 3's original layouts and the new engine
           </div>
           <div class="project-images">
-            <img src="images/F4CW-1.jpg" loading="lazy" onclick="window.open(this.src,'_blank')" alt="F4CW Screenshot 1">
-            <img src="images/F4CW-2.jpg" loading="lazy" onclick="window.open(this.src,'_blank')" alt="F4CW Screenshot 2">
-            <img src="images/F4CW-3.jpg" loading="lazy" onclick="window.open(this.src,'_blank')" alt="F4CW Screenshot 3">
-            <img src="images/F4CW-4.jpg" loading="lazy" onclick="window.open(this.src,'_blank')" alt="F4CW Screenshot 4">
+            <span class="img-wrap" data-tooltip="F4CW Screenshot 1"><img src="images/F4CW-1.jpg" loading="lazy" onclick="window.open(this.src,'_blank')" alt="F4CW Screenshot 1"></span>
+            <span class="img-wrap" data-tooltip="F4CW Screenshot 2"><img src="images/F4CW-2.jpg" loading="lazy" onclick="window.open(this.src,'_blank')" alt="F4CW Screenshot 2"></span>
+            <span class="img-wrap" data-tooltip="F4CW Screenshot 3"><img src="images/F4CW-3.jpg" loading="lazy" onclick="window.open(this.src,'_blank')" alt="F4CW Screenshot 3"></span>
+            <span class="img-wrap" data-tooltip="F4CW Screenshot 4"><img src="images/F4CW-4.jpg" loading="lazy" onclick="window.open(this.src,'_blank')" alt="F4CW Screenshot 4"></span>
           </div>
         </div>
       </div>
@@ -459,33 +501,33 @@ The mod reimagines the familiar world of Fallout 3, allowing players to explore 
         <div class="accordion-content" aria-hidden="true">
           <div class="project-body" data-markdown>
 ## About
-Fallout 4: Capital Wasteland is a large scale fan-made mod for **Fallout 4** that aims to recreate the setting of **Fallout 3**, focusing on the Capital Wasteland - the devastated region surrounding Washington, D.C.
+Steelhead was a CS:GO map that was sadly never published but went through tons of interations and playtests.
+I was the sole developer, artist, and designer for this competitive map.
+Steelhead was scheduled to release in early 2024 but with the CS2 release in late 2023 it replaced the previous engine, thus killing the ongoing project Steelhead.
 
-The mod reimagines the familiar world of Fallout 3, allowing players to explore the same locations and encounter similar factions, enemies, and quests, but with the enhanced visuals and mechanics of Fallout 4. It essentially combines the narrative and environment of Fallout 3 with the gameplay improvements and engine of Fallout 4.
+Me and a friend participated and attempted a Game Jam half way into 2024, our scope ended up being too big and we missed the submission deadline.
+However it was still a cool concept inspired by Link to the Past and also a great learning experience for me! This was made in Unity!
 
 ## My Role
-- Built over **600 exterior/interior world space cells**
-- Contributed to repositories weekly for over a year
-- Earned the title of **Senior Level Designer**
-- Collaborated closely with the level design and world-building teams
-- Ensured spatial consistency between Fallout 3's original layouts and the new engine
+- Lead Programmer & Artist (Game Jam)
+- Lead Developer & Designer (Steelhead)
           </div>
           <div class="project-images">
-            <img src="images/Extra-1.jpg" loading="lazy" onclick="window.open(this.src,'_blank')" alt="Steelhead Screenshot 1">
-            <img src="images/Extra-2.jpg" loading="lazy" onclick="window.open(this.src,'_blank')" alt="Steelhead Screenshot 2">
-            <img src="images/Extra-3.jpg" loading="lazy" onclick="window.open(this.src,'_blank')" alt="Steelhead Screenshot 3">
-            <img src="images/Extra-4.jpg" loading="lazy" onclick="window.open(this.src,'_blank')" alt="Steelhead Screenshot 4">
-            <img src="images/Extra-1.jpg" loading="lazy" onclick="window.open(this.src,'_blank')" alt="Steelhead Screenshot 1">
-            <img src="images/Extra-2.jpg" loading="lazy" onclick="window.open(this.src,'_blank')" alt="Steelhead Screenshot 2">
-            <img src="images/Extra-3.jpg" loading="lazy" onclick="window.open(this.src,'_blank')" alt="Steelhead Screenshot 3">
-            <img src="images/Extra-4.jpg" loading="lazy" onclick="window.open(this.src,'_blank')" alt="Steelhead Screenshot 4">
+            <span class="img-wrap" data-tooltip="Game Jam Screenshot 1"><img src="images/Extra-1.jpg" loading="lazy" onclick="window.open(this.src,'_blank')" alt="Game Jam Screenshot 1"></span>
+            <span class="img-wrap" data-tooltip="Game Jam Screenshot 2"><img src="images/Extra-2.jpg" loading="lazy" onclick="window.open(this.src,'_blank')" alt="Game Jam Screenshot 2"></span>
+            <span class="img-wrap" data-tooltip="Game Jam Screenshot 3"><img src="images/Extra-3.jpg" loading="lazy" onclick="window.open(this.src,'_blank')" alt="Game Jam Screenshot 3"></span>
+            <span class="img-wrap" data-tooltip="Game Jam Screenshot 4"><img src="images/Extra-4.jpg" loading="lazy" onclick="window.open(this.src,'_blank')" alt="Game Jam Screenshot 4"></span>
+            <span class="img-wrap" data-tooltip="Steelhead Screenshot 1"><img src="images/Extra-5.jpg" loading="lazy" onclick="window.open(this.src,'_blank')" alt="Steelhead Screenshot 1"></span>
+            <span class="img-wrap" data-tooltip="Steelhead Screenshot 2"><img src="images/Extra-6.jpg" loading="lazy" onclick="window.open(this.src,'_blank')" alt="Steelhead Screenshot 2"></span>
+            <span class="img-wrap" data-tooltip="Steelhead Screenshot 3"><img src="images/Extra-7.jpg" loading="lazy" onclick="window.open(this.src,'_blank')" alt="Steelhead Screenshot 3"></span>
+            <span class="img-wrap" data-tooltip="Steelhead Screenshot 4"><img src="images/Extra-8.jpg" loading="lazy" onclick="window.open(this.src,'_blank')" alt="Steelhead Screenshot 4"></span>
           </div>
         </div>
       </div>
-	  ‎ 
-	  ‎ 
-	<p style="display:flex; justify-content:center; align-items:center;">© Malena Rivas</p>
-	<p style="display:flex; justify-content:center; align-items:center;">All content and trademarks property of their respective owners.</p>
+      ‎ 
+      ‎ 
+    <p style="display:flex; justify-content:center; align-items:center;">© Malena Rivas</p>
+    <p style="display:flex; justify-content:center; align-items:center;">All content and trademarks property of their respective owners.</p>
 
     </section>
 
@@ -517,7 +559,7 @@ Custom C# Engine (MonoGame/.NET), Godot, Unity, Source Engine, and CreationKit.
 
 
 **Design:**
-2D/3D Level Design, Gameplay Designs, Worldspace Encounters, and Proper Design Documentation.
+2D/3D Level Design, Gameplay Designs, Worldspace Encounters, Save/Load Systems, Proper Design Documentation.
 
 
 **Narrative Design:**
@@ -538,9 +580,9 @@ CDT (UTC-5) - Houston, TX
 [LinkedIn Profile](https://www.linkedin.com/in/malena-rivas-7b910b329)
 ‎ 
 ‎ 
-	</div>
-	<p style="display:flex; justify-content:center; align-items:center;">© Malena Rivas</p>
-	<p style="display:flex; justify-content:center; align-items:center;">All content and trademarks property of their respective owners.</p>
+    </div>
+    <p style="display:flex; justify-content:center; align-items:center;">© Malena Rivas</p>
+    <p style="display:flex; justify-content:center; align-items:center;">All content and trademarks property of their respective owners.</p>
     </section>
   </div>
 </main>
