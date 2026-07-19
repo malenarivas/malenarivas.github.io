@@ -994,7 +994,7 @@
         // ── Snow effect (winter only) ──
         (function() {
             const month = new Date().getMonth();
-            const isWinter = (month === 6 || month === 0 || month === 1);
+            const isWinter = (month === 11 || month === 0 || month === 1);
             if (!isWinter) return;
             if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
 
